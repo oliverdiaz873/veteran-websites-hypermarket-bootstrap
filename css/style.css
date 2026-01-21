@@ -1,4 +1,16 @@
 
+/* Estilos generales del body */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/images/fondos/fondo.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
 /* Header global */
 header {
   position: fixed;
@@ -155,6 +167,22 @@ header {
   display: flex;
 }
 
+/* Estilo para la flecha desplegable del botón categorías */
+.dropdown-arrow {
+  font-size: 0.7em;
+  margin-left: 3px;
+  opacity: 0.8;
+}
+
+/* Estilo para las flechas hacia la derecha de submenús */
+.right-arrow {
+  font-size: 1.5em;
+  margin-left: 3px;
+  opacity: 0.8;
+  vertical-align: middle;
+  line-height: 1;
+}
+
 /* ======================== Desktop (>=768px) ======================== */
 @media (min-width: 768px) {
   .menu-btn,
@@ -250,7 +278,10 @@ header {
   .brand h1 {
   white-space: nowrap;
   margin-left: 5px;  /* Reducir espacio después del logo */
+  }
+
 }
+
 
 /* Estilos específicos para móviles cuando el buscador está activo */
 @media (max-width: 767.98px) {
@@ -557,18 +588,18 @@ header {
 }
 
 
-  .nav-links-mobile a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    width: 100%;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
+.nav-links-mobile a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 
-  .nav-links-mobile a:last-child {
-    border-bottom: none;
-  }
+.nav-links-mobile a:last-child {
+  border-bottom: none;
+}
 
  
 
@@ -578,8 +609,6 @@ header {
 /* Submenú abierto */
 .nav-links-mobile li.show > ul {
    display: block;
-}
-
 }
 
 /* ================= botón de búsqueda ================= */
@@ -763,7 +792,6 @@ body.menu-busqueda-activa .buscador-header {
 main {
     padding-top: 100px; /* Espacio para el header fijo */
     min-height: 100vh;
-    background: linear-gradient(135deg, #351c1cda 0%, #2d2d2d 100%);
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -798,7 +826,7 @@ main .container {
 /* Reducir separación superior de Sobre Nosotros en desktop */
 @media (min-width: 768px) {
     .sobre-nosotros {
-        margin: 35px auto 60px auto !important; /* solo margin-top reducido para desktop */
+        margin: 35px auto 60px auto !important; /* margin-bottom original de 60px */
     }
 }
 
@@ -831,6 +859,17 @@ main .container {
     line-height: 1.6;
 }
 
+
+/* Animación de scroll de la sección de ofertas - Solo fade-in */
+.reveal {
+  opacity: 0;
+  transition: opacity 1.5s ease-out;
+}
+
+/* Clase que activa la animación */
+.reveal.active {
+  opacity: 1;
+}
 
 /* Sección Productos Destacados y ofertas */
 
@@ -907,7 +946,7 @@ main .container {
         padding: 12px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* alinear al inicio para reducir separaciones */
+        justify-content: normal; /* alinear elementos normalmente sin distribuir espacio */
     }
     
     .productos-destacados .producto h3 {
@@ -918,8 +957,8 @@ main .container {
         display: -webkit-box !important;
         -webkit-line-clamp: 2 !important; /* máximo 2 líneas - esto ya muestra "..." */
         -webkit-box-orient: vertical !important;
-        margin-bottom: 8px !important; /* aumentar separación con precio */
-        line-height: 1.2 !important; /* altura de línea controlada */
+        margin-bottom: 0px !important; /* controlar separación con precio */
+        line-height: 1 !important; /* altura de línea controlada */
     }
     
     .productos-destacados .producto p {
@@ -929,7 +968,9 @@ main .container {
         display: block !important; /* comportamiento normal */
         -webkit-line-clamp: unset !important; /* remover clamp */
         -webkit-box-orient: unset !important; /* remover orientación */
-        line-height: 1.2;
+        line-height: 1;
+        margin: 10px !important; /* sobreescribir el estilo global */
+        padding: 0 !important; /* eliminar cualquier padding */
     }
     
     .productos-destacados .producto img {
@@ -940,7 +981,7 @@ main .container {
         width: 70px !important;
         height: 30px !important;
         font-size: 14px !important; /* tamaño profesional para accesibilidad táctil */
-        margin-top: 12px !important; /* aumentar 2px más la separación */
+        margin-top: 0px !important; /* aumentar 2px más la separación */
         margin-bottom: 0; /* asegurar que no se corte */
         align-self: center !important; /* forzar centrado horizontal */
         margin-left: auto !important; /* forzar centrado */
@@ -979,8 +1020,126 @@ main .container {
     }
 }
 
-/* Responsive para desktop - solo 4 tarjetas visibles */
-@media (min-width: 768px) {
+/* ======================== Tablets (768px - 1024px) ======================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Ocultar botones de navegación en tablets */
+    .productos-control-prev,
+    .productos-control-next {
+        display: none !important; /* Ocultar botones en tablets */
+    }
+    
+    /* Agregar márgenes laterales para tablets */
+    .productos-destacados {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        max-width: calc(100vw - 40px) !important; /* 100% menos márgenes */
+    }
+    
+    /* Mostrar scrollbar en tablets para feedback visual */
+    .productos-destacados .productos-container::-webkit-scrollbar {
+        display: block; /* Mostrar scrollbar en tablets */
+        height: 6px;
+    }
+    
+    .productos-destacados .productos-container {
+        scroll-snap-type: x mandatory; /* Activar snap para tablets */
+        -webkit-overflow-scrolling: touch; /* Mejor scroll táctil */
+    }
+    
+    /* Snap para productos en tablets */
+    .productos-destacados .producto {
+        scroll-snap-align: start; /* Alinear productos al inicio */
+    }
+    
+    /* ==================== MENÚ TABLETS - MOSTRAR COMO DESKTOP ==================== */
+    /* Ocultar botón hamburguesa en tablets */
+    .menu-btn {
+        display: none !important;
+    }
+    
+    /* Mostrar menú de navegación normal en tablets */
+    .nav-links {
+        display: flex !important;
+        position: static !important;
+        background: transparent !important;
+        width: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Contenedor del header para tablets */
+    .header-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+        padding: 5px 10px !important;
+    }
+    
+    /* Ocultar menú móvil en tablets */
+    .nav-links-mobile {
+        display: none !important;
+    }
+    
+    /* Ajustar header para tablets */
+    header {
+        width: 100% !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        top: 10px !important;
+        left: 0 !important;
+        transform: none !important;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+    /* ==================== MENÚ MULTINIVEL POR CLIC EN TABLETS ==================== */
+    
+    /* Desactivar hover en tablets para evitar conflictos */
+    .nav-links > ul > li:hover > ul {
+        display: none !important;
+    }
+    
+    /* Ocultar todos los submenús por defecto */
+    .nav-links > ul > li > ul {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(0,0,0,0.9);
+        border-radius: 8px;
+        min-width: 220px;
+        z-index: 9999;
+        text-align: left;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        margin-right: 10px; /* Margen derecho para iPad Mini y tablets */
+    }
+    
+    /* Submenús de nivel 3 */
+    .nav-links > ul > li > ul > li > ul {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background: rgba(0,0,0,0.9);
+        border-radius: 8px;
+        min-width: 200px;
+        z-index: 9999;
+        margin-right: 10px; /* Margen derecho para iPad Mini y tablets */
+        max-width: calc(100vw - 50px); /* Evitar que se salga de la pantalla */
+    }
+    
+    /* Clase para mostrar submenús */
+    .nav-links > ul > li > ul.tablet-active {
+        display: block !important;
+    }
+    
+    .nav-links > ul > li > ul > li > ul.tablet-active {
+        display: block !important;
+    }
+}
+
+/* Responsive para desktop (1025px en adelante) - solo 4 tarjetas visibles */
+@media (min-width: 1025px) {
     .productos-destacados .productos-container {
 
         gap: 20px;
@@ -996,6 +1155,15 @@ main .container {
         white-space: normal !important; /* permitir múltiples líneas */
         text-overflow: unset !important; /* remover puntos suspensivos */
         font-size: 16px !important; /* tamaño original para productos destacados */
+    }
+}
+
+/* Márgenes laterales para productos destacados y ofertas en pantallas grandes (1290px en adelante) */
+@media (min-width: 1290px) {
+    .productos-destacados {
+        width: calc(100vw - 40px) !important; /* 100% del viewport menos espacio para bordes */
+        margin: 40px auto 60px auto !important; /* márgenes automáticos como Sobre Nosotros */
+        max-width: 100% !important; /* asegurar que no exceda el contenedor */
     }
 }
 
@@ -1057,12 +1225,18 @@ main .container {
     /* Aumentar altura de la sección completa de ofertas usando su ID */
     #ofertas.productos-destacados {
         height: 550px; /* altura de la sección completa para que quepa todo */
-        margin-bottom: 10px !important; /* sobreescribir el margin-bottom de .productos-destacados */
+        margin-bottom: 15px !important; /* sobreescribir el margin-bottom de .productos-destacados */
+    }
+    
+    /* Estilo específico para nombres de productos en oferta */
+    .productos-destacados .oferta_height h3 {
+        margin-bottom: 0px !important; /* margin-bottom específico para ofertas */
     }
 }
 
 /* Estilo adicional para asegurar separación mínima en ofertas */
 #ofertas {
+    margin-bottom: 15px !important;
     margin-bottom: 10px !important;
 }
 
@@ -1298,9 +1472,9 @@ main .container {
     transform: scale(1.05);
 }
 
-/* Nombre del producto */
+/* Nombre del producto*/
 .productos-destacados .producto h3 {
-    margin: 0 0 5px 0; /* reducido espacio con precio */
+  
     font-size: 18px;
     flex-grow: 1;
     display: flex;
@@ -1350,6 +1524,16 @@ main .container {
     font-weight: bold;
 }
 
+/* Limitar párrafos de ofertas a 3 líneas con puntos suspensivos */
+.productos-destacados .oferta_height p {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important; /* máximo 3 líneas */
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+}
+
 
 
 
@@ -1364,7 +1548,7 @@ section > * {
     margin: 0 auto;  
 }
 
-/* Botón agregar */
+/* Botón agregar de las tarjetas de productos */
 .btn-agregar {
     margin-top: 10px; 
     width: 80px !important;
@@ -1394,6 +1578,96 @@ section > * {
 }
 .btn-agregar:hover {
     background-color: #ffe57c;
+}
+
+/* ======================== FOOTER GLOBAL ======================== */
+
+/* Footer - Mobile First */
+footer {
+    color: white;
+    padding: 20px;
+    margin: 0;  /* Eliminar márgenes para que cubra todo su contenedor */
+    text-align: center;
+    font-size: 15px;
+    background-color: rgba(0,0,0,0.85);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+}
+
+.social-icons i {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+    color: #ffcc00;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive para tablet y desktop */
+@media (min-width: 768px) {
+    footer {
+        padding: 15px 0px 25px;  /* Agregar padding superior para separación en tablet */
+        font-size: 16px;
+    }
+    
+    .footer-content {
+        gap: 15px;
+    }
+    
+    .social-icons i {
+        font-size: 28px;
+    }
+    
+    .footer-links a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+}
+
+/* Responsive para desktop grande */
+@media (min-width: 1024px) {
+    footer {
+        padding: 20px 30px 30px;  /* Agregar padding superior para separación */
+        font-size: 17px;
+    }
+    
+    .footer-content {
+        flex-direction: column; /* Mantener layout vertical como en móvil */
+        gap: 20px; /* Aumentar separación vertical */
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .social-icons i {
+        font-size: 32px; /* Iconos un poco más grandes en desktop */
+    }
+    
+    .footer-links a {
+        margin: 0 10px;
+        font-size: 16px;
+    }
 }
 
 

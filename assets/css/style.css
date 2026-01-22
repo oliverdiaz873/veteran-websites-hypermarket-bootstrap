@@ -1,9 +1,8 @@
-
 /* Estilos generales del body */
 body {
     margin: 0;
     padding: 0;
-    background-image: url('../assets/images/fondos/fondo.avif');
+    background-image: url('../images/fondos/fondo.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,7 +54,7 @@ header {
   width: clamp(25px, 8vw, 40px);
 }
 
-.brand h1 {
+.brand h1, .brand span {
   font-size: clamp(12px, 4vw, 20px);
   margin: 0;
    flex-wrap: nowrap;
@@ -216,7 +215,7 @@ header {
     gap: 15px; /* Reducir espacio entre enlaces */
   }
   
-  .brand h1 {
+  .brand h1, .brand span {
     font-size: clamp(14px, 3vw, 18px); /* Título más pequeño */
   }
   
@@ -275,7 +274,7 @@ header {
     
   }
 
-  .brand h1 {
+  .brand h1, .brand span {
   white-space: nowrap;
   margin-left: 5px;  /* Reducir espacio después del logo */
   }
@@ -381,7 +380,7 @@ header {
     box-sizing: border-box;
   }
   
-  .brand h1 {
+  .brand h1, .brand span {
     font-size: clamp(12px, 3.5vw, 16px);  /* Título más pequeño */
   }
   
@@ -414,7 +413,7 @@ header {
     gap: 2px;  /* Espacio mínimo entre elementos */
   }
   
-  .brand h1 {
+  .brand h1, .brand span {
     font-size: clamp(10px, 4vw, 14px);  /* Título muy pequeño */
     margin-left: 2px;
   }
@@ -790,7 +789,7 @@ body.menu-busqueda-activa .buscador-header {
 
 /* Estilos generales para el main */
 main {
-    padding-top: 80px; /* Espacio para el header fijo */
+    padding-top: 0px; /* Espacio para el header fijo */
     min-height: 100vh;
     width: 100%;
     max-width: 100%;
@@ -1028,6 +1027,11 @@ main .container {
         display: none !important; /* Ocultar botones en tablets */
     }
     
+    /* Ajustar espaciado entre header y main en tablets */
+    main {
+        padding-top: 100px !important;
+    }
+    
     /* Agregar márgenes laterales para tablets */
     .productos-destacados {
         margin-left: 20px !important;
@@ -1113,6 +1117,7 @@ main .container {
         text-align: left;
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         margin-right: 10px; /* Margen derecho para iPad Mini y tablets */
+        max-width: calc(100vw - 50px); /* Evitar que se salga de la pantalla */
     }
     
     /* Submenús de nivel 3 */
@@ -1138,6 +1143,19 @@ main .container {
     }
 }
 
+/* Tablet grande */
+@media (min-width: 1250px) {
+    /* Ajustar espaciado entre header y main en tablets grandes */
+    main {
+        padding-top: 120px !important;
+    }
+    
+    /* Ajustar header para tablets grandes */
+    header {
+        top: 15px !important;
+    }
+}
+
 /* Responsive para desktop (1025px en adelante) - solo 4 tarjetas visibles */
 @media (min-width: 1025px) {
     .productos-destacados .productos-container {
@@ -1156,6 +1174,11 @@ main .container {
         text-overflow: unset !important; /* remover puntos suspensivos */
         font-size: 16px !important; /* tamaño original para productos destacados */
     }
+    
+    /* Asegurar espaciado correcto en desktop entre header y main */
+    main {
+        padding-top: 80px !important;
+    }
 }
 
 /* Márgenes laterales para productos destacados y ofertas en pantallas grandes (1290px en adelante) */
@@ -1164,6 +1187,26 @@ main .container {
         width: calc(100vw - 86px) !important; /* 100% del viewport menos 80px para bordes (40px cada lado) ideal para los botones del carrusel*/
         margin: 40px auto 60px auto !important; /* márgenes automáticos como Sobre Nosotros */
         max-width: 100% !important; /* asegurar que no exceda el contenedor */
+    }
+}
+
+/* Pantallas extra grandes (1400px en adelante) */
+@media (min-width: 1400px) {
+    /* Ajustar espaciado entre header y main en pantallas extra grandes */
+    main {
+        padding-top: 160px !important;
+    }
+    
+    /* Ajustar header para pantallas extra grandes */
+    header {
+        top: 20px !important;
+    }
+    
+    /* Ajustar productos destacados para pantallas extra grandes */
+    .productos-destacados {
+        width: calc(100vw - 100px) !important; /* 100% del viewport menos 100px para bordes (50px cada lado) */
+        margin: 50px auto 70px auto !important; /* márgenes más amplios */
+        max-width: 100% !important;
     }
 }
 

@@ -1,0 +1,141 @@
+/* SECCIÓN GENERAL DE CONTACTO */
+section#contacto {
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* ===== MAIN ===== */
+main.contacto-container {
+    max-width: 600px; /* reducir ancho */
+    width: 90%;       /* adaptable a pantallas pequeñas */
+    margin: 130px auto 2rem auto; /* aumentar margen superior */
+    
+    padding: 30px 40px;
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.8);
+    border: solid 2px rgb(199, 199, 199,0.2);
+    
+    color: #fff;
+
+
+}
+
+/* h1 del form */
+
+main.contacto-container .contacto-form h1 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.contacto-container .input-box {
+    width: 100%;
+    height: 70px;
+    margin: 30px 0;
+}
+
+.input-box {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column; /* apila label sobre input */
+    align-items: flex-start; /* alinea a la izquierda */
+    gap: 5px; /* espacio entre label e input */
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255,0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 15px 20px;  /* mismo padding horizontal */
+    box-sizing: border-box;
+    
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+
+/* Estilo textarea igual que inputs */
+.contacto-form textarea {
+    width: 100%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 16px;
+    color: #fff;
+     font-family: Arial, sans-serif;
+    outline: none;
+    box-sizing: border-box;
+     resize: none;  /* desactiva el cambio de tamaño */
+    overflow: auto;         /* permite scroll interno */
+    scrollbar-width: none;  
+     padding: 40px 20px;  /* mismo padding horizontal */
+    
+}
+
+.contacto-form textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.contacto-form textarea::placeholder {
+    color: #fff;
+}
+
+.contacto-form textarea:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.contacto-form input:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+
+
+.input-box label {
+    font-size: 17px;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+
+.contacto-form button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    outline: none;
+    padding: 1rem;
+    margin-top: 30px;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contacto-form button:hover {
+    background-color: #ffcc00;
+     
+}

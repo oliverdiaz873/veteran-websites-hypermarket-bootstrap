@@ -790,7 +790,7 @@ body.menu-busqueda-activa .buscador-header {
 
 /* Estilos generales para el main */
 main {
-    padding-top: 100px; /* Espacio para el header fijo */
+    padding-top: 80px; /* Espacio para el header fijo */
     min-height: 100vh;
     width: 100%;
     max-width: 100%;
@@ -1161,7 +1161,7 @@ main .container {
 /* Márgenes laterales para productos destacados y ofertas en pantallas grandes (1290px en adelante) */
 @media (min-width: 1290px) {
     .productos-destacados {
-        width: calc(100vw - 40px) !important; /* 100% del viewport menos espacio para bordes */
+        width: calc(100vw - 86px) !important; /* 100% del viewport menos 80px para bordes (40px cada lado) ideal para los botones del carrusel*/
         margin: 40px auto 60px auto !important; /* márgenes automáticos como Sobre Nosotros */
         max-width: 100% !important; /* asegurar que no exceda el contenedor */
     }
@@ -1550,7 +1550,7 @@ section > * {
 
 /* Botón agregar de las tarjetas de productos */
 .btn-agregar {
-    margin-top: 10px; 
+    margin-top: 17px; 
     width: 80px !important;
     height: 35px !important;
     color: #000000;

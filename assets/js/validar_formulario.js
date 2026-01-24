@@ -1,16 +1,16 @@
 const formulario = document.getElementById("formulario-contacto");  // getElementById es un método del objeto document que permite obtener un elemento HTML del DOM usando su atributo id y almacenarlo en una variable.
 
-// Función para mostrar Toast Notification - Como el ejemplo con clase
-function mostrarToast(mensaje, tipo = "success") {
+// Función para mostrar Toast Notification - Simplificada
+function mostrarToast(mensaje) {
     const toast = document.getElementById("mi-toast");
     
     // Actualizar mensaje
     toast.textContent = mensaje;
     
-    // Mostrar con animación (usar clase como en el ejemplo)
+    // Mostrar con animación
     toast.classList.add("mostrar");
     
-    // Auto-eliminar después de 2.5 segundos (como en el ejemplo)
+    // Auto-eliminar después de 2.5 segundos
     setTimeout(() => {
         toast.classList.remove("mostrar");
     }, 2500);
@@ -202,7 +202,7 @@ formulario.addEventListener("submit", function (e) {
     // Si todo está bien
     if (valido) {
         // Mostrar Toast de éxito en lugar de alert
-        mostrarToast(`✓ Formulario enviado correctamente. Gracias ${nombre}, te contactaremos pronto.`, "success");
+        mostrarToast(`✓ Formulario enviado correctamente.`);
         
         // Limpiar formulario usando la constante
         formulario.reset(); // reset() es un método del objeto HTMLFormElement, es decir, pertenece a los formularios HTML, y su función es devolver todos los campos del formulario a su valor inicial.

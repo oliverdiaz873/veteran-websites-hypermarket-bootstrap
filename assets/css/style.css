@@ -55,7 +55,7 @@ header {
 }
 
 .brand h1, .brand span {
-  font-size: clamp(12px, 4vw, 20px);
+  font-size: clamp(14px, 4vw, 20px);
   margin: 0;
    flex-wrap: nowrap;
 }
@@ -381,7 +381,7 @@ header {
   }
   
   .brand h1, .brand span {
-    font-size: clamp(12px, 3.5vw, 16px);  /* Título más pequeño */
+    font-size: clamp(14px, 3.5vw, 16px);  /* Título más pequeño */
   }
   
   .menu-btn {

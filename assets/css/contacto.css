@@ -338,10 +338,10 @@ main.contacto-container .contacto-form h1 {
     }
     
     main.contacto-container {
-        max-width: 600px;
-        width: 90%;
+        max-width: 750px;
+        width: 85%;
         margin: 110px auto 2rem auto;
-        padding: 30px 40px;
+        padding: 35px 45px;
         border-radius: 12px;
     }
     
@@ -375,6 +375,42 @@ main.contacto-container .contacto-form h1 {
         height: 45px;
         border-radius: 40px;
         margin-bottom: 0px;
+    }
+}
+
+/* MEDIUM DESKTOP/TABLET STYLES - 820px and up */
+@media (min-width: 820px) {
+    main.contacto-container {
+        max-width: 700px;
+        width: 88%;
+        padding: 30px 45px;
+    }
+    
+    main.contacto-container .contacto-form h1 {
+        font-size: 28px;
+    }
+    
+    .contacto-form textarea {
+        height: 220px;
+        padding: 35px 20px;
+    }
+}
+
+/* WIDER DESKTOP STYLES - 1151px and up */
+@media (min-width: 1151px) {
+    main.contacto-container {
+        max-width: 800px;
+        width: 85%;
+        padding: 35px 50px;
+    }
+    
+    main.contacto-container .contacto-form h1 {
+        font-size: 32px;
+    }
+    
+    .contacto-form textarea {
+        height: 280px;
+        padding: 45px 25px;
     }
 }
 

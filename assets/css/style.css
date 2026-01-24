@@ -1631,7 +1631,7 @@ footer {
     padding: 20px;
     margin: 0;  /* Eliminar márgenes para que cubra todo su contenedor */
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     background-color: rgba(0,0,0,0.85);
 }
 
@@ -1672,7 +1672,7 @@ footer {
 @media (min-width: 768px) {
     footer {
         padding: 15px 0px 25px;  /* Agregar padding superior para separación en tablet */
-        font-size: 16px;
+        font-size: 18px;
     }
     
     .footer-content {
@@ -1693,7 +1693,7 @@ footer {
 @media (min-width: 1024px) {
     footer {
         padding: 20px 30px 30px;  /* Agregar padding superior para separación */
-        font-size: 17px;
+        font-size: 18px;
     }
     
     .footer-content {

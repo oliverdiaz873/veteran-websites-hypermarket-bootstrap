@@ -1,92 +1,88 @@
-/* SECCIÓN GENERAL DE CONTACTO */
+/* SECCIÓN GENERAL DE CONTACTO - MOBILE FIRST */
 section#contacto {
     width: 100%;
-    padding: 60px 20px;
+    padding: 40px 15px;
     display: flex;
     justify-content: center;
 }
 
-
-
-/* ===== MAIN ===== */
+/* ===== MAIN - MOBILE FIRST ===== */
 main.contacto-container {
-    max-width: 600px; /* reducir ancho */
-    width: 90%;       /* adaptable a pantallas pequeñas */
-    margin: 130px auto 2rem auto; /* aumentar margen superior */
-    
-    padding: 30px 40px;
-    border-radius: 12px;
+    max-width: 100%;
+    width: 95%;
+    margin: 80px auto 1rem auto;
+    padding: 20px 15px;
+    border-radius: 8px;
     background-color: rgba(0,0,0,0.8);
-    border: solid 2px rgb(199, 199, 199,0.2);
-    
+    border: solid 1px rgb(199, 199, 199,0.2);
     color: #fff;
-
-
 }
 
-/* h1 del form */
-
+/* h1 del form - MOBILE */
 main.contacto-container .contacto-form h1 {
     color: #fff;
-    font-size: 30px;
+    font-size: 26px;
     margin-bottom: 1rem;
     text-align: center;
     justify-content: center;
 }
 
+.contacto-info h2{
+    padding-top: 16px;
+    text-align: center;
+    font-size: 22px;
+}
+
 .contacto-container .input-box {
     width: 100%;
-    height: 70px;
-    margin: 30px 0;
+    height: auto;
+    margin: 20px 0;
 }
 
 .input-box {
     width: 100%;
-    margin: 20px 0;
+    margin: 15px 0;
     display: flex;
-    flex-direction: column; /* apila label sobre input */
-    align-items: flex-start; /* alinea a la izquierda */
-    gap: 5px; /* espacio entre label e input */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
 }
 
 .input-box input {
     width: 100%;
-    height: 100%;
+    height: 50px;
     background: transparent;
     border: none;
     outline: none;
     border: 2px solid rgba(255, 255, 255,0.2);
-    border-radius: 40px;
+    border-radius: 25px;
     font-size: 16px;
     color: #fff;
     font-family: Arial, sans-serif;
-    padding: 15px 20px;  /* mismo padding horizontal */
+    padding: 12px 18px;
     box-sizing: border-box;
-    
 }
 
 .input-box input::placeholder {
     color: #fff;
 }
 
-
-/* Estilo textarea igual que inputs */
+/* Estilo textarea - MOBILE */
 .contacto-form textarea {
     width: 100%;
-    height: 250px;
+    height: 180px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 16px;
     color: #fff;
-     font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
     outline: none;
     box-sizing: border-box;
-     resize: none;  /* desactiva el cambio de tamaño */
-    overflow: auto;         /* permite scroll interno */
-    scrollbar-width: none;  
-     padding: 40px 20px;  /* mismo padding horizontal */
-    
+    resize: none;
+    overflow: auto;
+    scrollbar-width: none;
+    padding: 20px  15px ;
 }
 
 .contacto-form textarea::-webkit-scrollbar {
@@ -107,35 +103,278 @@ main.contacto-container .contacto-form h1 {
     box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
 }
 
-
-
 .input-box label {
-    font-size: 17px;
+    font-size: 18px;
     color: #fff;
     font-weight: 600;
-    margin-left: 10px;
+    margin-left: 8px;
 }
-
 
 .contacto-form button {
     width: 100%;
-    height: 45px;
+    height: 50px;
     background: #fff;
     outline: none;
-    padding: 1rem;
-    margin-top: 30px;
+    padding: auto;
+    margin-top: 0px;
     border: none;
-    border-radius: 40px;
+    border-radius: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     color: #000000;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    cursor: pointer;
     transition: background 0.3s;
+    text-align: center;
 }
 
 .contacto-form button:hover {
     background-color: #ffcc00;
-     
 }
+
+
+/* Estilos para mensajes de error */
+.error-message {
+    color: #ff6b6b;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-left: 10px;
+    min-height: 16px;
+    transition: all 0.3s ease;
+}
+
+.error-message:empty {
+    opacity: 0;
+}
+
+.error-message:not(:empty) {
+    opacity: 1;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.input-box input.invalid-value,
+.input-box textarea.invalid-value {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+.input-box input:focus:not(.invalid-value),
+.input-box textarea:focus:not(.invalid-value) {
+    border-color: #51cf66;
+    box-shadow: 0 0 10px rgba(81, 207, 102, 0.3);
+}
+
+/* Toast Notification Styles - Exactamente como el ejemplo pero arriba a la derecha */
+#mi-toast {
+    position: fixed;
+    top: 20px;                 /* Posición superior */
+    right: 20px;                /* Posición derecha */
+    z-index: 9999999;           /* z-index máximo absoluto */
+
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+
+    opacity: 0;                 /* Oculto por defecto */
+    transform: translateY(-15px); /* Animación desde arriba */
+    pointer-events: none;       /* No interactuable cuando oculto */
+    transition: opacity .3s ease, transform .3s ease;
+    
+    /* Asegurar que esté por encima de todo */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+#mi-toast.mostrar {
+    opacity: 1;
+    transform: translateY(0);    /* Posición final */
+}
+
+
+
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    section#contacto {
+        padding: 30px 20px;
+    }
+    
+    main.contacto-container {
+        max-width: 550px;
+        width: 85%;
+        margin: 80px auto 1.5rem auto;
+        padding: 25px 30px;
+        border-radius: 12px;
+        border: solid 2px rgb(199, 199, 199,0.2);
+        background-color: rgba(0,0,0,0.85);
+    }
+    
+    main.contacto-container .contacto-form h1 {
+        font-size: 26px;
+        margin-bottom: 1.2rem;
+        text-align: center;
+    }
+    
+    .contacto-container .input-box {
+        width: 100%;
+        height: auto;
+        margin: 18px 0;
+    }
+    
+    .input-box {
+        width: 100%;
+        margin: 15px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .input-box input {
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255,0.3);
+        border-radius: 25px;
+        font-size: 16px;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    
+    .input-box input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .contacto-form textarea {
+        width: 100%;
+        height: 150px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 15px;
+        font-size: 16px;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        outline: none;
+        box-sizing: border-box;
+        resize: none;
+        overflow: auto;
+        scrollbar-width: none;
+        padding: 20px 20px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    
+    .contacto-form textarea::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .contacto-form textarea::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .contacto-form textarea:focus,
+    .input-box input:focus {
+        border-color: #ffcc00;
+        box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+    }
+    
+    .input-box label {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 600;
+        margin-left: 10px;
+    }
+    
+    .contacto-form button {
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+        outline: none;
+        padding: 1rem;
+        margin-top: 25px;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+    
+    .contacto-form button:hover {
+        background: linear-gradient(135deg, #ffcc00 0%, #ffb300 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 204, 0, 0.3);
+    }
+    
+    h2 {
+        padding-top: 15px;
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+
+
+/* DESKTOP STYLES - 1024px and up */
+@media (min-width: 1024px) {
+    section#contacto {
+        padding: 60px 20px;
+    }
+    
+    main.contacto-container {
+        max-width: 600px;
+        width: 90%;
+        margin: 110px auto 2rem auto;
+        padding: 30px 40px;
+        border-radius: 12px;
+    }
+    
+    main.contacto-container .contacto-form h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        padding: 25px 20px 0;
+
+    }
+    
+    .contacto-container .input-box {
+       
+        margin: 15px 0;
+    }
+    
+    .input-box input {
+        height: 100%;
+        border-radius: 40px;
+        padding: 15px 20px;
+    }
+    
+    .contacto-form textarea {
+        height: 250px;
+        border-radius: 20px;
+        padding: 40px 20px;
+    }
+    
+    .contacto-form button {
+        height: 45px;
+        border-radius: 40px;
+        margin-bottom: 0px;
+    }
+}
+

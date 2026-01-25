@@ -1,0 +1,958 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+     <!--META ETIQUETAS-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre en Hipermercado Superior la mejor selección de alimentos frescos y de mejor calidad.">
+    <meta name="author" content="Oliver Antonio Díaz"/>
+    <meta name="robots" content="index, follow">  
+    <meta name="copyright" content="Oliver Antonio Díaz. Todos los derechos reservados.">
+    <meta name="theme-color" content="#2196f3">
+
+    <!-- Etiquetas Open Graph -->
+    <meta property="og:title" content="Alimentos - Hipermercado Superior">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hipermercadosuperior.com/alimentos"> <!-- URL de la sección -->
+    <meta property="og:image" content="imagenes/alimentos-banner.jpg"> 
+    <meta property="og:description" content="Descubre en Hipermercado Superior la mejor selección de alimentos frescos y de mejor calidad.">
+    <meta property="og:site_name" content="Hipermercado Superior">
+    <meta property="og:locale" content="es_ES"> 
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alimentos - Hipermercado Superior">
+    <meta name="twitter:description" content="Descubre en Hipermercado Superior la mejor selección de alimentos frescos y de mejor calidad.">
+    <meta name="twitter:image" content="https://www.hipermercadosuperior.com/imagenes/alimentos-banner.jpg">
+
+    <!-- Título, CSS y Fuentes-->
+    <title>Hipermercado Superior | Sección de Alimentos</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/categorias.css">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+     <!-- Favicons -->
+    <link rel="icon" href="../assets/icons/favicons/icon-16x16.jpg" type="image/jpg" sizes="16x16">
+    <link rel="icon" href="../assets/icons/favicons/icon-32x32.jpg" type="image/jpg" sizes="32x32">
+    <link rel="icon" href="../assets/icons/favicons/icon-48x48.jpg" type="image/jpg" sizes="48x48">
+    
+    <!-- Scripts necesarios -->
+    <script src="../assets/js/hamburger_menu.js" type="text/javascript" defer></script>
+    <script src="../assets/js/boton_de_busqueda.js" type="text/javascript" defer></script>
+    <script src="../assets/js/productos.js" defer></script> 
+    <script src="../assets/js/carrito.js" defer></script>
+    <script src="../assets/js/ofertas_animation.js" defer></script>
+    <script src="../assets/js/scroll_animations.js" defer></script>
+    <script src="../assets/js/productos_navegacion.js" defer></script>
+  </head>
+
+<body id="fondo_alimentos">
+
+     <!-- ===== HEADER GLOBAL ===== -->
+  <header>
+  <div class="header-container">
+    <!-- Botón hamburguesa solo en móvil -->
+    <button class="menu-btn">
+      <i class="bi bi-list"></i> 
+    </button>
+
+    <!-- Logo + título -->
+    <a href="../index.html" class="brand" aria-label="Ir a la página principal de Hipermercado Superior">
+      <img src="../assets/images/logo/logo.jpeg" alt="Logo de Hipermercado Superior">
+      <h1>Hipermercado Superior</h1>
+    </a>
+
+    <!-- Menú de navegación -->
+    <nav class="nav-links" role="navigation" aria-label="Menú principal">
+
+     <ul>
+
+        <!-- Nivel 1 -->
+        <li><a href="../index.html">Inicio</a></li>
+
+        <!-- Nivel 1: Categorías <span class="dropdown-arrow">▼</span> -->
+        <!-- href="#" indica que es un enlace vacío, # significa no ir a ninguna página en particular -->
+        <!-- aria-haspopup="true" Sirve para lectores de pantalla (personas no videntes) para que sepan que ese enlace tiene un submenú desplegable. -->
+        <!-- aria-expanded="false" significa "Este menú actualmente está cerrado". -->
+        <li><a href="#" aria-haspopup="true" aria-expanded="false">Categorías <span class="dropdown-arrow">▼</span></a>
+
+            <ul>
+
+                <!-- Nivel 2: Alimentos -->
+                <li>
+                    <a href="../categorias/Alimentos.html">Alimentos <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/Alimentos.html#frutas_y_verduras">Frutas y Verduras</a></li>
+                        <li><a href="../categorias/Alimentos.html#despensa">Despensa</a></li>
+                        <li><a href="../categorias/Alimentos.html#carnes_pescados_mariscos">Carnes, Pescados y Mariscos</a></li>
+                        <li><a href="../categorias/Alimentos.html#lacteos_y_huevos">Lácteos y Huevos</a></li>
+                        <li><a href="../categorias/Alimentos.html#bebidas">Bebidas</a></li>
+                        <li><a href="../categorias/Alimentos.html#enlatados">Enlatados</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Electrodomésticos -->
+                <li>
+                    <a href="../categorias/Electrodomesticos.html">Electrodomésticos <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/Electrodomesticos.html#cocina">Cocina</a></li>
+                        <li><a href="../categorias/Electrodomesticos.html#lavado">Lavado</a></li>
+                        <li><a href="../categorias/Electrodomesticos.html#climatizacion">Climatización</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Tecnología -->
+                <li>
+                    <a href="../categorias/tecnologia.html">Tecnología <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/tecnologia.html#televisores">Televisores</a></li>
+                        <li><a href="../categorias/tecnologia.html#laptops">Laptops</a></li>
+                        <li><a href="../categorias/tecnologia.html#tablets">Tablets</a></li>
+                        <li><a href="../categorias/tecnologia.html#celulares">Celulares</a></li>
+                        <li><a href="../categorias/tecnologia.html#bocinas">Bocinas</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Ropa -->
+                <li>
+                    <a href="../categorias/Ropa.html">Ropa <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/Ropa.html#pantalones_para_hombres">Pantalones para Hombres</a></li>
+                        <li><a href="../categorias/Ropa.html#pantalones_para_mujeres">Pantalones para Mujeres</a></li>
+                        <li><a href="../categorias/Ropa.html#pantalones_para_niños">Pantalones para Niños</a></li>
+                        <li><a href="../categorias/Ropa.html#trajes_para_hombres">Trajes para Hombres</a></li>
+                        <li><a href="../categorias/Ropa.html#vestidos">Vestidos</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Muebles y Decoración -->
+                <li>
+                    <a href="../categorias/muebles_y_decoracion.html">Muebles y Decoración <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/muebles_y_decoracion.html#sofas">Sofás</a></li>
+                        <li><a href="../categorias/muebles_y_decoracion.html#sillones">Sillones</a></li>
+                        <li><a href="../categorias/muebles_y_decoracion.html#mesas">Mesas</a></li>
+                        <li><a href="../categorias/muebles_y_decoracion.html#floreros">Floreros</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Farmacia -->
+                <li>
+                    <a href="../categorias/Farmacia.html">Farmacia <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/Farmacia.html#analgesicos">Analgésicos</a></li>
+                        <li><a href="../categorias/Farmacia.html#dermocosmetica">Dermocosmética</a></li>
+                        <li><a href="../categorias/Farmacia.html#vitaminas_y_minerales">Vitaminas y Minerales</a></li>
+                        <li><a href="../categorias/Farmacia.html#antigripales_y_resfriado">Antigripales y Resfriado</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Ferretería -->
+                <li>
+                    <a href="../categorias/Ferreteria.html">Ferretería <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/Ferreteria.html#herramientas_manuales">Herramientas Manuales</a></li>
+                        <li><a href="../categorias/Ferreteria.html#pinturas_y_acabados">Pinturas y Acabados</a></li>
+                        <li><a href="../categorias/Ferreteria.html#electricidad">Electricidad</a></li>
+                        <li><a href="../categorias/Ferreteria.html#plomeria">Plomería</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Juguetes -->
+                <li>
+                    <a href="../categorias/juguetes.html">Juguetes <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/juguetes.html#juguetes_para_niños">Juguetes para Niños</a></li>
+                        <li><a href="../categorias/juguetes.html#juguetes_para_niñas">Juguetes para Niñas</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+
+        <!-- Nivel 1 -->
+        <li><a href="../index.html#ofertas">Ofertas</a></li>
+        <li><a href="../contacto/">Contacto</a></li>
+
+        <!-- botón de búsqueda -->
+       <li class="buscador-header">
+         <input type="text" id="input-buscar" placeholder="Buscar productos..."  autocomplete="off" aria-label="Escribe tu búsqueda">
+            <button type="button" aria-label="Buscar productos" id="btn-buscar">
+              <i class="bi bi-search" id="icono-buscar"></i>
+            </button>
+         <ul id="resultados-busqueda" class="resultados-busqueda"></ul>  <!-- Coincidencencias -->
+       </li>
+
+       <!-- botón del carrito -->
+     <li class="carrito-item">
+       <a href="../carrito.html" class="carrito-header" aria-label="Ver carrito">
+              <img 
+                 src="../assets/icons/shopping_cart_icon/shopping_car_icon.png" 
+                 alt="Carrito de compras"
+                 class="icono-carrito"
+               >
+                <span id="contador-carrito">0</span>
+       </a>
+     </li>
+
+    </ul>
+    </nav>
+  </div>
+
+  
+  <!-- Menú móvil colapsable -->
+<nav class="nav-links-mobile">
+  <ul>
+
+     <!-- Nivel 1 -->
+        <li><a href="../index.html">Inicio</a></li>
+
+        <!-- Nivel 1: Categorías <span class="dropdown-arrow">▼</span> -->
+        <!-- href="#" indica que es un enlace vacío, # significa no ir a ninguna página en particular -->
+        <!-- aria-haspopup="true" Sirve para lectores de pantalla (personas no videntes) para que sepan que ese enlace tiene un submenú desplegable. -->
+        <!-- aria-expanded="false" significa "Este menú actualmente está cerrado". -->
+        <li><a href="#" aria-haspopup="true" aria-expanded="false">Categorías <span class="dropdown-arrow">▼</span></a>
+
+            <ul>
+
+                <!-- Nivel 2: Alimentos -->
+                <li>
+                    <a href="../categorias/Alimentos.html">Alimentos <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/Alimentos.html#frutas_y_verduras">Frutas y Verduras</a></li>
+                        <li><a href="../categorias/Alimentos.html#despensa">Despensa</a></li>
+                        <li><a href="../categorias/Alimentos.html#carnes_pescados_mariscos">Carnes, Pescados y Mariscos</a></li>
+                        <li><a href="../categorias/Alimentos.html#lacteos_y_huevos">Lácteos y Huevos</a></li>
+                        <li><a href="../categorias/Alimentos.html#bebidas">Bebidas</a></li>
+                        <li><a href="../categorias/Alimentos.html#enlatados">Enlatados</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Electrodomésticos -->
+                <li>
+                    <a href="../categorias/Electrodomesticos.html">Electrodomésticos <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/Electrodomesticos.html#cocina">Cocina</a></li>
+                        <li><a href="../categorias/Electrodomesticos.html#lavado">Lavado</a></li>
+                        <li><a href="../categorias/Electrodomesticos.html#climatizacion">Climatización</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Tecnología -->
+                <li>
+                    <a href="../categorias/tecnologia.html">Tecnología <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/tecnologia.html#televisores">Televisores</a></li>
+                        <li><a href="../categorias/tecnologia.html#laptops">Laptops</a></li>
+                        <li><a href="../categorias/tecnologia.html#tablets">Tablets</a></li>
+                        <li><a href="../categorias/tecnologia.html#celulares">Celulares</a></li>
+                        <li><a href="../categorias/tecnologia.html#bocinas">Bocinas</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Ropa -->
+                <li>
+                    <a href="../categorias/Ropa.html">Ropa <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/Ropa.html#pantalones_para_hombres">Pantalones para Hombres</a></li>
+                        <li><a href="../categorias/Ropa.html#pantalones_para_mujeres">Pantalones para Mujeres</a></li>
+                        <li><a href="../categorias/Ropa.html#pantalones_para_niños">Pantalones para Niños</a></li>
+                        <li><a href="../categorias/Ropa.html#trajes_para_hombres">Trajes para Hombres</a></li>
+                        <li><a href="../categorias/Ropa.html#vestidos">Vestidos</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Muebles y Decoración -->
+                <li>
+                    <a href="../categorias/muebles_y_decoracion.html">Muebles y Decoración <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/muebles_y_decoracion.html#sofas">Sofás</a></li>
+                        <li><a href="../categorias/muebles_y_decoracion.html#sillones">Sillones</a></li>
+                        <li><a href="../categorias/muebles_y_decoracion.html#mesas">Mesas</a></li>
+                        <li><a href="../categorias/muebles_y_decoracion.html#floreros">Floreros</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Farmacia -->
+                <li>
+                    <a href="../categorias/Farmacia.html">Farmacia <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/Farmacia.html#analgesicos">Analgésicos</a></li>
+                        <li><a href="../categorias/Farmacia.html#dermocosmetica">Dermocosmética</a></li>
+                        <li><a href="../categorias/Farmacia.html#vitaminas_y_minerales">Vitaminas y Minerales</a></li>
+                        <li><a href="../categorias/Farmacia.html#antigripales_y_resfriado">Antigripales y Resfriado</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Ferretería -->
+                <li>
+                    <a href="../categorias/Ferreteria.html">Ferretería <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/Ferreteria.html#herramientas_manuales">Herramientas Manuales</a></li>
+                        <li><a href="../categorias/Ferreteria.html#pinturas_y_acabados">Pinturas y Acabados</a></li>
+                        <li><a href="../categorias/Ferreteria.html#electricidad">Electricidad</a></li>
+                        <li><a href="../categorias/Ferreteria.html#plomeria">Plomería</a></li>
+                    </ul>
+                </li>
+
+                <!-- Nivel 2: Juguetes -->
+                <li>
+                    <a href="../categorias/juguetes.html">Juguetes <span class="right-arrow">▸</span></a>
+                    <ul> <!-- Nivel 3: -->
+                        <li><a href="../categorias/juguetes.html#juguetes_para_niños">Juguetes para Niños</a></li>
+                        <li><a href="../categorias/juguetes.html#juguetes_para_niñas">Juguetes para Niñas</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+
+        <!-- Nivel 1 -->
+        <li><a href="../index.html#ofertas">Ofertas</a></li>
+        <li><a href="../contacto/">Contacto</a></li>
+   
+  </ul>
+</nav>
+</header>
+
+<!-- Breadcrumb o indicador de ubicación -->
+<nav class="breadcrumb">
+  <a href="../index.html">Inicio</a> ›
+  <span>Categorías</span> ›
+  <span class="actual">Alimentos</span>
+</nav>
+       
+     <main> <!--main-->
+
+          <!-- Sección: Frutas y verduras -->
+          <section class="productos-destacados destino" id="frutas_y_verduras">
+              <div class="container">
+                  <h2>Frutas y verduras</h2>
+
+                  <div class="productos-container-wrapper">
+                      <button class="productos-control-prev" type="button" id="frutas_y_verduras-prev">
+                          <i class="bi bi-chevron-left"></i>
+                          <span class="visually-hidden">Anterior</span>
+                      </button>
+                      
+                      <div class="productos-container">
+                          <!-- Producto 1 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/manzanas_rojas.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/manzana_roja.avif" alt="manzanas rojas" loading="lazy">
+                                  <h3>Manzanas rojas</h3>
+                                  <p>Precio: $65 1KG</p>
+                                  <button class="btn-agregar" id="manzanas_rojas">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 2 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/manzanas_verdes.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/manzana_verde.avif" alt="Manzanas verdes" loading="lazy">
+                                  <h3>Manzanas verdes</h3>
+                                  <p>Precio: $45 / 1 kg</p>
+                                  <button class="btn-agregar" id="manzanas_verdes">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 3 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/pepinos.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/pepino.avif" alt="Pepinos" loading="lazy">
+                                  <h3>Pepinos</h3>
+                                  <p>Precio: $70 1KG</p>
+                                  <button class="btn-agregar" id="pepinos">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 4 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/limones_persa.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/Limon_persa.avif" alt="Limones persa" loading="lazy">
+                                  <h3>Limones Persa</h3>
+                                  <p>Precio: $200 1KG</p>
+                                  <button class="btn-agregar" id="limones_persa">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 5 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/cebollas_rojas.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/cebolla_roja.avif" alt="Cebollas rojas" loading="lazy">
+                                  <h3>Cebollas rojas</h3>
+                                  <p>Precio: $170 1KG</p>
+                                  <button class="btn-agregar" id="cebollas_rojas">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 6 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/tomates_de_ensalada.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/tomate_de_ensalada.avif" alt="Tomates de ensalada" loading="lazy">
+                                  <h3>Tomates de ensalada</h3>
+                                  <p>Precio: $80 1KG</p>
+                                  <button class="btn-agregar" id="tomates_de_ensalada">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 7 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/ajies_morrones.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/Ajies_morron.avif" alt="Ajíes morrones" loading="lazy">
+                                  <h3>Ajíes Morrones</h3>
+                                  <p>Precio: $80 la unidad</p>
+                                  <button class="btn-agregar" id="ajies_morrones">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 8 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/zanahorias.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/zanahoria.avif" alt="Zanahorias" loading="lazy">
+                                  <h3>Zanahorias</h3>
+                                  <p>Precio: $80 1KG</p>
+                                  <button class="btn-agregar" id="zanahorias">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 9 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/manzanas_amarillas.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/manzana_amarilla.avif" alt="Manzanas amarillas" loading="lazy">
+                                  <h3>Manzanas amarillas</h3>
+                                  <p>Precio: $50 1KG</p>
+                                  <button class="btn-agregar" id="manzanas_amarillas">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 10 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/paquete_de_fresas.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/fresas.avif" alt="Paquete de fresas" loading="lazy">
+                                  <h3>Paquete de Fresas</h3>
+                                  <p>Precio: $350 el paquete</p>
+                                  <button class="btn-agregar" id="paquete_de_fresas">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 11 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/uvas_moradas.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/uva_morada.avif" alt="Uvas moradas" loading="lazy">
+                                  <h3>Uvas Moradas</h3>
+                                  <p>Precio: $150 1KG</p>
+                                  <button class="btn-agregar" id="uvas_moradas">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 12 -->
+                          <a href="../productos/Alimentos/Frutas_y_verduras/mandarinas.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/frutas_y_verduras/mandarinas.avif" alt="Mandarinas" loading="lazy">
+                                  <h3>Mandarinas</h3>
+                                  <p>Precio: $150 1KG</p>
+                                  <button class="btn-agregar" id="mandarinas">Agregar</button>
+                              </article>
+                          </a>
+                      </div>
+                      
+                      <button class="productos-control-next" type="button" id="frutas_y_verduras-next">
+                          <i class="bi bi-chevron-right"></i>
+                          <span class="visually-hidden">Siguiente</span>
+                      </button>
+                  </div>
+              </div>
+          </section>
+
+       <!-- Sección: Carnes, Pescados y Mariscos-->
+          <section class="productos-destacados destino reveal" id="carnes_pescados_mariscos">
+              <div class="container">
+                  <h2>Carnes, Pescados y Mariscos</h2>
+
+                  <div class="productos-container-wrapper">
+                      <button class="productos-control-prev" type="button" id="carnes_pescados_mariscos-prev">
+                          <i class="bi bi-chevron-left"></i>
+                          <span class="visually-hidden">Anterior</span>
+                      </button>
+                      
+                      <div class="productos-container">
+                          <!-- Producto 1 -->
+                          <a href="../productos/Alimentos/carnes_pescados_y_mariscos/tilapia_roja.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/carnes_pescados_mariscos/pescado/tilapia_roja.avif" alt="Tilapia roja fresca" loading="lazy">
+                                  <h3>Tilapia roja</h3>
+                                  <p>Precio: $250 / 1 LB</p>
+                                  <button class="btn-agregar" id="tilapia_roja">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 2 -->
+                          <a href="../productos/Alimentos/carnes_pescados_y_mariscos/camarones_precocidos.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/carnes_pescados_mariscos/mariscos/camarones_pre-cocidos.avif" alt="Camarones pre-cocidos" loading="lazy">
+                                  <h3>Camarones pre-cocidos</h3>
+                                  <p>Precio: $400 / 1 LB</p>
+                                  <button class="btn-agregar" id="camarones_pre_cocidos">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 3 -->
+                          <a href="../productos/Alimentos/carnes_pescados_y_mariscos/camarones_crudos.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/carnes_pescados_mariscos/mariscos/camarones_crudos.avif" alt="Camarones crudos" loading="lazy">
+                                  <h3>Camarones crudos</h3>
+                                  <p>Precio: $350 / 1 LB</p>
+                                  <button class="btn-agregar" id="camarones_crudos">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 4 -->
+                          <a href="../productos/Alimentos/carnes_pescados_y_mariscos/pollo_entero_don_pollo.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/carnes_pescados_mariscos/pollo/pollo.avif" alt="Pollo Entero Don Pollo" loading="lazy">
+                                  <h3>Pollo Entero Don Pollo</h3>
+                                  <p>Precio: $300 / unidad</p>
+                                  <button class="btn-agregar" id="pollo_entero_don_pollo">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 5 -->
+                          <a href="../productos/Alimentos/carnes_pescados_y_mariscos/carne_de_res_para_hamburguesas.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/carnes_pescados_mariscos/res/carne_de_res.avif" alt="Carne de res para hamburguesas" loading="lazy">
+                                  <h3>Carne de res para hamburguesas</h3>
+                                  <p>Precio: $370 / 1 LB</p>
+                                  <button class="btn-agregar" id="carne_de_res_para_hamburguesas">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 6 -->
+                          <a href="../productos/Alimentos/carnes_pescados_y_mariscos/chuleta_de_cerdo.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/carnes_pescados_mariscos/cerdo/chuleta_de_cerdo.avif" alt="Chuleta de cerdo" loading="lazy">
+                                  <h3>Chuleta de cerdo</h3>
+                                  <p>Precio: $300 / 1 LB</p>
+                                  <button class="btn-agregar" id="chuleta_de_cerdo">Agregar</button>
+                              </article>
+                          </a>
+                      </div>
+                      
+                      <button class="productos-control-next" type="button" id="carnes_pescados_mariscos-next">
+                          <i class="bi bi-chevron-right"></i>
+                          <span class="visually-hidden">Siguiente</span>
+                      </button>
+                  </div>
+              </div>
+          </section>
+
+
+
+
+       <!-- Sección: Despensa -->
+          <section class="productos-destacados destino reveal" id="despensa">
+              <div class="container">
+                  <h2>Despensa</h2>
+
+                  <div class="productos-container-wrapper">
+                      <button class="productos-control-prev" type="button" id="despensa-prev">
+                          <i class="bi bi-chevron-left"></i>
+                          <span class="visually-hidden">Anterior</span>
+                      </button>
+                      
+                      <div class="productos-container">
+                          <!-- Producto 1 -->
+                          <a href="../productos/Alimentos/despensa/sal_refisal.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Despensa/condimentos/sal_marina_refisal.jpg" alt="Sal marina refisal" loading="lazy">
+                                  <h3>Sal marina refisal</h3>
+                                  <p>Precio: $65,000</p>
+                                  <button class="btn-agregar" id="sal_marina_refisal">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 2 -->
+                          <a href="../productos/Alimentos/despensa/sazon_completo_maggi.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Despensa/condimentos/sazon_completo_maggi.avif" alt="Sazón completo Maggi" loading="lazy">
+                                  <h3>Sazón completo Maggi</h3>
+                                  <p>Precio: $80.00</p>
+                                  <button class="btn-agregar" id="sazon_completo_maggi">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 3 -->
+                          <a href="../productos/Alimentos/despensa/sopita_dona_gallina.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Despensa/condimentos/sopita_doña_gallina.avif" alt="Sopita doña gallina" loading="lazy">
+                                  <h3>Sopita Doña gallina</h3>
+                                  <p>Precio: $150 / la caja</p>
+                                  <button class="btn-agregar" id="sopita_doña_gallina">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 4 -->
+                          <a href="../productos/Alimentos/despensa/aceite_crisol.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Despensa/aceites/aceite_crisol.avif" alt="Aceite Crisol" loading="lazy">
+                                  <h3>Aceite Crisol</h3>
+                                  <p>Precio: $95</p>
+                                  <button class="btn-agregar" id="aceite_crisol">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 5 -->
+                          <a href="../productos/Alimentos/despensa/vinagre_baldom.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Despensa/condimentos/vinagre_baldom.avif" alt="Vinagre baldom" loading="lazy">
+                                  <h3>Vinagre Baldom</h3>
+                                  <p>Precio: $87</p>
+                                  <button class="btn-agregar" id="vinagre_baldom">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 6 -->
+                          <a href="../productos/Alimentos/despensa/aceite_oliva_extra_virgen.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Despensa/aceites/aceite_de_oliva_extra_virgen.avif" alt="Aceite de oliva extra virgen" loading="lazy">
+                                  <h3>Aceite de oliva extra virgen</h3>
+                                  <p>Precio: $230</p>
+                                  <button class="btn-agregar" id="aceite_de_oliva_extra_virgen">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 7 -->
+                          <a href="../productos/Alimentos/despensa/mayonesa_baldom.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Despensa/aderezos_y_salsas/mayonesa_baldom.avif" alt="Mayonesa baldom" loading="lazy">
+                                  <h3>Mayonesa Baldom</h3>
+                                  <p>Precio: $95</p>
+                                  <button class="btn-agregar" id="mayonesa_baldom">Agregar</button>
+                              </article>
+                          </a>
+                      </div>
+                      
+                      <button class="productos-control-next" type="button" id="despensa-next">
+                          <i class="bi bi-chevron-right"></i>
+                          <span class="visually-hidden">Siguiente</span>
+                      </button>
+                  </div>
+              </div>
+          </section>
+
+
+
+        <!-- Sección: Lácteos y Huevos -->
+          <section class="productos-destacados destino reveal" id="lacteos_y_huevos">
+              <div class="container">
+                  <h2>Lácteos y Huevos</h2>
+
+                  <div class="productos-container-wrapper">
+                      <button class="productos-control-prev" type="button" id="lacteos_y_huevos-prev">
+                          <i class="bi bi-chevron-left"></i>
+                          <span class="visually-hidden">Anterior</span>
+                      </button>
+                      
+                      <div class="productos-container">
+                          <!-- Producto 1 -->
+                          <a href="../productos/Alimentos/lacteos_y_huevos/leche_entera_rica.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/lacteos_y_huevos/leche/leche_entera_rica.avif" alt="Leche entera rica" loading="lazy">
+                                  <h3>Leche entera rica</h3>
+                                  <p>Precio: $65,000</p>
+                                  <button class="btn-agregar" id="leche_entera_rica">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 2 -->
+                          <a href="../productos/Alimentos/lacteos_y_huevos/huevos.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/lacteos_y_huevos/huevos/huevos_30unidades.avif" alt="Huevos 30 unidades" loading="lazy">
+                                  <h3>Huevos Don Pancho</h3>
+                                  <p>Precio: $200 / 30 unidades</p>
+                                  <button class="btn-agregar" id="huevos_don_pancho">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 3 -->
+                          <a href="../productos/Alimentos/lacteos_y_huevos/queso_gorgonzola.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/lacteos_y_huevos/queso/queso_gorgonzola.avif" alt="Queso gorgonzola" loading="lazy">
+                                  <h3>Queso gorgonzola</h3>
+                                  <p>Precio: $350 / 1 LB</p>
+                                  <button class="btn-agregar" id="queso_gorgonzola">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 4 -->
+                          <a href="../productos/Alimentos/lacteos_y_huevos/queso_gouda.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/lacteos_y_huevos/queso/queso_gouda.avif" alt="Queso gouda" loading="lazy">
+                                  <h3>Queso Gouda</h3>
+                                  <p>Precio: $280 / 1 LB</p>
+                                  <button class="btn-agregar" id="queso_gouda">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 5 -->
+                          <a href="../productos/Alimentos/lacteos_y_huevos/yogurt_fresa_yoka.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/lacteos_y_huevos/yogurt/yogurt_de_fresa.avif" alt="Yogurt de fresa" loading="lazy">
+                                  <h3>Yogurt de fresa Yoka</h3>
+                                  <p>Precio: $150</p>
+                                  <button class="btn-agregar" id="yogurt_de_fresa_yoka">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 6 -->
+                          <a href="../productos/Alimentos/lacteos_y_huevos/yogurt_natural_rica.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/lacteos_y_huevos/yogurt/yogurt_natural.avif" alt="Yogurt natural" loading="lazy">
+                                  <h3>Yogurt natural Rica</h3>
+                                  <p>Precio: $210 / 2 Litros</p>
+                                  <button class="btn-agregar" id="yogurt_natural_rica">Agregar</button>
+                              </article>
+                          </a>
+                      </div>
+                      
+                      <button class="productos-control-next" type="button" id="lacteos_y_huevos-next">
+                          <i class="bi bi-chevron-right"></i>
+                          <span class="visually-hidden">Siguiente</span>
+                      </button>
+                  </div>
+              </div>
+          </section>
+
+       <!--Sección: Bebidas-->
+          <section class="productos-destacados destino reveal" id="bebidas">
+              <div class="container">
+                  <h2>Bebidas</h2>
+
+                  <div class="productos-container-wrapper">
+                      <button class="productos-control-prev" type="button" id="bebidas-prev">
+                          <i class="bi bi-chevron-left"></i>
+                          <span class="visually-hidden">Anterior</span>
+                      </button>
+                      
+                      <div class="productos-container">
+                          <!-- Producto 1 -->
+                          <a href="../productos/Alimentos/bebidas/gatorade_uva.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Bebidas/energizantes/gatorade_uva.avif" alt="Gatorade de uva" loading="lazy">
+                                  <h3>Gatorade Uva</h3>
+                                  <p>Precio: $75</p>
+                                  <button class="btn-agregar" id="gatorade_uva">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 2 -->
+                          <a href="../productos/Alimentos/bebidas/red_bull.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Bebidas/energizantes/red_bull.avif" alt="Red bull" loading="lazy">
+                                  <h3>Red Bull</h3>
+                                  <p>Precio: $90</p>
+                                  <button class="btn-agregar" id="red_bull">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 3 -->
+                          <a href="../productos/Alimentos/bebidas/jugo_naranja_rica.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Bebidas/jugo/jugo_naranja_rica.avif" alt="Jugo de naranja rica" loading="lazy">
+                                  <h3>Jugo de Naranja Rica</h3>
+                                  <p>Precio: $55</p>
+                                  <button class="btn-agregar" id="jugo_de_naranja_rica">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 4 -->
+                          <a href="../productos/Alimentos/bebidas/jugo_pera_santal.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Bebidas/jugo/jugo_pera_santal.avif" alt="jugo de pera Santal" loading="lazy">
+                                  <h3>Jugo de Pera Santal</h3>
+                                  <p>Precio: $30</p>
+                                  <button class="btn-agregar" id="jugo_de_pera_santal">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 5 -->
+                          <a href="../productos/Alimentos/bebidas/coca_cola.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Bebidas/refresco/coca_cola.avif" alt="Coca cola" loading="lazy">
+                                  <h3>Coca Cola</h3>
+                                  <p>Precio: $80 / 2 Litros</p>
+                                  <button class="btn-agregar" id="coca_cola">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 6 -->
+                          <a href="../productos/Alimentos/bebidas/country_club_frambuesa.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Bebidas/refresco/country_club_frambuesa.avif" alt="Refresco Country club de frambuesa" loading="lazy">
+                                  <h3>Country Club Frambuesa</h3>
+                                  <p>Precio: $70 / 2 Litros</p>
+                                  <button class="btn-agregar" id="country_club_frambuesa">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 7 -->
+                          <a href="../productos/Alimentos/bebidas/country_club_uva.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Bebidas/refresco/country_club_uva.avif" alt="Refresco Country club de uva" loading="lazy">
+                                  <h3>Country Club Uva</h3>
+                                  <p>Precio: $70 / 2 Litros</p>
+                                  <button class="btn-agregar" id="country_club_uva">Agregar</button>
+                              </article>
+                          </a>
+                      </div>
+                      
+                      <button class="productos-control-next" type="button" id="bebidas-next">
+                          <i class="bi bi-chevron-right"></i>
+                          <span class="visually-hidden">Siguiente</span>
+                      </button>
+                  </div>
+              </div>
+          </section>
+
+        <!-- Sección: Enlatados-->
+          <section class="productos-destacados destino reveal" id="enlatados">
+              <div class="container">
+                  <h2>Enlatados</h2>
+
+                  <div class="productos-container-wrapper">
+                      <button class="productos-control-prev" type="button" id="enlatados-prev">
+                          <i class="bi bi-chevron-left"></i>
+                          <span class="visually-hidden">Anterior</span>
+                      </button>
+                      
+                      <div class="productos-container">
+                          <!-- Producto 1 -->
+                          <a href="../productos/Alimentos/enlatados/atun_dimar.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Enlatados/atun_dimar.avif" alt="Atún dimar" loading="lazy">
+                                  <h3>Atún Dimar</h3>
+                                  <p>Precio: $65</p>
+                                  <button class="btn-agregar" id="atun_dimar">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 2 -->
+                          <a href="../productos/Alimentos/enlatados/gandules_verdes_goya.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Enlatados/gandules_verdes_goya.avif" alt="Guandules verdes Goya" loading="lazy">
+                                  <h3>Gandules Verdes Goya</h3>
+                                  <p>Precio: $80</p>
+                                  <button class="btn-agregar" id="gandules_verdes_goya">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 3 -->
+                          <a href="../productos/Alimentos/enlatados/habichuelas_negras_goya.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Enlatados/habichuelas_negras_goya.avif" alt="Habichuelas negras gouya" loading="lazy">
+                                  <h3>Habichuelas negras goya</h3>
+                                  <p>Precio: $50</p>
+                                  <button class="btn-agregar" id="habichuelas_negras_goya">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 4 -->
+                          <a href="../productos/Alimentos/enlatados/maiz_la_famosa.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Enlatados/maiz_la_famosa.avif" alt="Maiz la famosa" loading="lazy">
+                                  <h3>Maíz La Famosa</h3>
+                                  <p>Precio: $45</p>
+                                  <button class="btn-agregar" id="maiz_la_famosa">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 5 -->
+                          <a href="../productos/Alimentos/enlatados/sardinas_gord.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Enlatados/sardinas_gord.avif" alt="Sardinas Gord" loading="lazy">
+                                  <h3>Sardinas Gord</h3>
+                                  <p>Precio: $85</p>
+                                  <button class="btn-agregar" id="sardinas_gord">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 6 -->
+                          <a href="../productos/Alimentos/enlatados/salchichas_jaja.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Enlatados/salchichas_jaja.avif" alt="Salchichas jaja" loading="lazy">
+                                  <h3>Salchichas Jaja</h3>
+                                  <p>Precio: $45</p>
+                                  <button class="btn-agregar" id="salchichas_jaja">Agregar</button>
+                              </article>
+                          </a>
+
+                          <!-- Producto 7 -->
+                          <a href="../productos/Alimentos/enlatados/tomates_pelados_la_famosa.html" class="text-decoration-none">
+                              <article class="producto">
+                                  <img src="../assets/images/productos/Alimentos/Enlatados/tomates_pelados.avif" alt="Tomates pelados la famosa" loading="lazy">
+                                  <h3>Tomates Pelados la famosa</h3>
+                                  <p>Precio: $60</p>
+                                  <button class="btn-agregar" id="tomates_pelados_la_famosa">Agregar</button>
+                              </article>
+                          </a>
+                      </div>
+                      
+                      <button class="productos-control-next" type="button" id="enlatados-next">
+                          <i class="bi bi-chevron-right"></i>
+                          <span class="visually-hidden">Siguiente</span>
+                      </button>
+                  </div>
+              </div>
+          </section>
+
+
+    </main>
+
+
+    <!--footer Global-->
+    <footer> 
+        
+         <div class=" container_fluid footer-content">
+              <!-- Derechos reservados -->
+              <small>&copy; 2026 Hipermercado Superior. Todos los derechos reservados.</small>
+
+              <!-- Íconos de redes sociales -->
+              <div class="social-icons">
+                   <a href="https://facebook.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Facebook">
+                    <i class="bi bi-facebook"></i>
+                   </a>
+
+                   <a href="https://twitter.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en X (antes Twitter)">
+                    <i class="bi bi-twitter-x"></i>
+                   </a>
+
+                   <a href="https://instagram.com/tuweb" target="_blank" rel="nofollow noopener noreferrer" aria-label="Visítanos en Instagram">
+                    <i class="bi bi-instagram"></i>
+                   </a>
+              </div>
+
+                 <!-- Enlaces legales -->
+                <div class="footer-links">
+                  <a href="../legal/privacy.html" title="Política de Privacidad">Política de Privacidad</a> |
+                  <a href="../legal/terms.html" title="Términos de Uso">Términos de Uso</a>
+                </div>
+            </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+
+
+</html>
+
+

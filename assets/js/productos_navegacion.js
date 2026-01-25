@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Configurar para ofertas
     setupCarousel('ofertas');
     
+    // Configurar para secciones de Alimentos
+    setupCarousel('frutas_y_verduras');
+    setupCarousel('carnes_pescados_mariscos');
+    setupCarousel('despensa');
+    setupCarousel('lacteos_y_huevos');
+    setupCarousel('bebidas');
+    setupCarousel('enlatados');
+    
     function setupCarousel(type) {
         const container = document.querySelector(`#${type}.productos-destacados .productos-container`) || 
                          document.querySelector(`.productos-destacados .productos-container`);

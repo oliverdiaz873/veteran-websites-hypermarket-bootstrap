@@ -1,5 +1,5 @@
-/* Estilos generales del body */
-body {
+/* Estilos generales del body - Solo para página principal */
+body:not([id^="fondo_"]):not([id="ferreteria"]) {
     margin: 0;
     padding: 0;
     background-image: url('../images/fondos/fondo.avif');
@@ -8,6 +8,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
+}
+
+/* Estilos base del body para todas las páginas */
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x: hidden;
 }
 
 /* Header global */
@@ -862,7 +870,7 @@ main .container {
 /* Animación de scroll de la sección de ofertas - Solo fade-in */
 .reveal {
   opacity: 0;
-  transition: opacity 1.5s ease-out;
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Clase que activa la animación */

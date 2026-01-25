@@ -1,0 +1,193 @@
+
+/* Reset básico y estilos generales del body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Espacio adicional para separar secciones del header y el breadcrumb (Mobile First) */
+main {
+    padding-top: 115px !important;
+}
+
+/* Espacio adicional para separar secciones del header y el breadcrumb - Tablets e iPads */
+@media (min-width: 768px) and (max-width: 1023px) {
+    main {
+        padding-top: 120px !important;
+    }
+}
+
+/* Espacio adicional para separar secciones del header y el breadcrumb - Desktop */
+@media (min-width: 1024px) {
+    main {
+        padding-top: 85px !important;
+    }
+}
+
+
+/* Fondos */
+#fondo_muebles_y_decoracion {
+    background-image: url('/assets/images/fondos/fondo_m.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+}
+
+#fondo_alimentos {
+    background-image: url('/assets/images/fondos/fondo.avif') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+   
+}
+
+#fondo_electrodomesticos {
+    background-image: url('/assets/images/fondos/electrodomesticos.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+}
+
+#fondo_tecnologia {
+    background-image: url('/assets/images/fondos/tecnologia.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+}
+
+#fondo_ropa {
+    background-image: url('/assets/images/fondos/ropa.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+}
+
+#fondo_farmacia {
+    background-image: url('/assets/images/fondos/farmacia.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+}
+
+#ferreteria {
+    background-image: url('/assets/images/fondos/ferreteria.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+}
+
+#fondo_juguetes {
+    background-image: url('/assets/images/fondos/fondo_muebles_y_decoracion.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+}
+
+
+
+
+
+/* Estilos generales del breadcrumb - Mobile First */
+.breadcrumb {
+  display: inline-block !important;
+  width: auto !important;
+  max-width: 90% !important;
+  background: rgba(0,0,0,0.85) !important;
+  padding: 8px 15px !important;
+  border-radius: 10px !important;
+  font-family: Arial, sans-serif;
+  font-size: 14px !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+  margin: 15px auto !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  
+  /* Centrado perfecto bajo el header fijo */
+  position: fixed;
+  top: 55px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 9999 !important;
+}
+
+/* Tablets y pantallas medianas (768px en adelante) */
+@media (min-width: 768px) {
+  .breadcrumb {
+    width: auto !important;
+    max-width: 80% !important;
+    padding: 8px 20px !important;
+    border-radius: 10px !important;
+    font-size: 14px !important;
+    top: 60px !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4) !important;
+  }
+}
+
+/* Desktop y pantallas grandes (1024px en adelante) */
+@media (min-width: 1024px) {
+  .breadcrumb {
+    max-width: 70% !important;
+    padding: 8px 20px !important;
+    border-radius: 10px !important;
+    font-size: 14px !important;
+    top: 65px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+  }
+}
+
+/* Enlaces dentro del breadcrumb */
+.breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+   background-color: rgba(255,255,255,0.2);
+}
+
+/* Separadores (›) */
+.breadcrumb span,
+.breadcrumb a {
+  margin: 0 5px;
+}
+
+/* Página actual */
+.breadcrumb .actual {
+  font-weight: bold;
+  color: #ffcc00;
+ 
+}
+
+
+
+/* margin-top para centrar la sección del vínculo cuando la visitemos */
+.destino {
+    scroll-margin-top: 155px; 
+}
+
+
+
+

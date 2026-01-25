@@ -48,6 +48,9 @@
     <script src="../assets/js/boton_de_busqueda.js" type="text/javascript" defer></script>
     <script src="../assets/js/productos.js" defer></script> 
     <script src="../assets/js/carrito.js" defer></script>
+    <script src="../assets/js/ofertas_animation.js" defer></script>
+    <script src="../assets/js/productos_navegacion.js" defer></script>
+    <script src="../assets/js/tablet_menu_click.js" defer></script>
   </head>
 
 
@@ -333,185 +336,233 @@
 
           <!-- Sección: Cocina -->
           <section class="productos-destacados destino" id="cocina">
-             <h2>Cocina</h2>
+              <div class="container">
+                  <h2>Cocina</h2>
 
-             <div class="productos-container">
-
+                  <div class="productos-container-wrapper">
+                      <!-- botón anterior del carrusel-->
+                      <button class="productos-control-prev" type="button" id="cocina-prev">
+                          <i class="bi bi-chevron-left"></i>
+                          <span class="visually-hidden">Anterior</span>
+                      </button>
+                      
+                      <div class="productos-container">
+                      <!-- Producto 1 -->
                <a href="../productos/electrodomesticos/cocina/nevera_lg.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/cocina/Neveras/Nevera_LG.png" alt="Nevera LG" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/cocina/Neveras/Nevera_LG.png" alt="Nevera LG" loading="lazy">
           <h3>Nevera LG</h3>
           <p>Precio: $80,000</p>
           <button class="btn-agregar" id="nevera_lg_grande_moderna">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 2 -->
       <a href="../productos/electrodomesticos/cocina/estufa_lg.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/cocina/Estufas/estufa_LG.avif" alt="Estufa LG" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/cocina/Estufas/estufa_LG.avif" alt="Estufa LG" loading="lazy">
           <h3>Estufa LG</h3>
           <p>Precio: $66,000</p>
           <button class="btn-agregar" id="estufa_lg">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 3 -->
       <a href="../productos/electrodomesticos/cocina/extractor_drija.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/cocina/extractor_de_grasa/extractor_de_grasa_Drija.avif" alt="Extractor Drija" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/cocina/extractor_de_grasa/extractor_de_grasa_Drija.avif" alt="Extractor Drija" loading="lazy">
           <h3>Extractor de grasa Drija</h3>
           <p>Precio: $6,000</p>
           <button class="btn-agregar" id="extractor_de_grasa_drija">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 4 -->
       <a href="../productos/electrodomesticos/cocina/cilindro_duragas.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/cocina/Cilindros_de_gas/cilindro_de_gas_duragas.avif" alt="Cilindro Duragas" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/cocina/Cilindros_de_gas/cilindro_de_gas_duragas.avif" alt="Cilindro Duragas" loading="lazy">
           <h3>Cilindro de gas Duragas</h3>
           <p>Precio: $5,200</p>
           <button class="btn-agregar" id="cilindro_de_gas_duragas">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 5 -->
       <a href="../productos/electrodomesticos/cocina/freezer_7_pies.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/cocina/freezer/freezer_7pies.png" alt="Freezer 7 Pies" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/cocina/freezer/freezer_7pies.png" alt="Freezer 7 Pies" loading="lazy">
           <h3>Freezer 7 Pies</h3>
           <p>Precio: $16,500</p>
           <button class="btn-agregar" id="freezer_7_pies">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 6 -->
       <a href="../productos/electrodomesticos/cocina/bebedero_tecnomaster.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/cocina/bebedero/bebedero_tecnomaster.avif" alt="Bebedero Tecnomaster" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/cocina/bebedero/bebedero_tecnomaster.avif" alt="Bebedero Tecnomaster" loading="lazy">
           <h3>Bebedero Tecnomaster</h3>
           <p>Precio: $5,000</p>
           <button class="btn-agregar" id="bebedero_tecnomaster">Agregar</button>
         </article>
       </a>
 
-            </div>
-      </section>
+                      </div>
+                      
+                      <!-- botón siguiente del carrusel-->
+                      <button class="productos-control-next" type="button" id="cocina-next">
+                          <i class="bi bi-chevron-right"></i>
+                          <span class="visually-hidden">Siguiente</span>
+                      </button>
+                  </div>
+              </div>
+          </section>
 
 
        <!-- Sección: Lavado-->
           <section class="productos-destacados destino reveal" id="lavado">
-             <h2>Lavado</h2>
+              <div class="container">
+                  <h2>Lavado</h2>
 
-             <div class="productos-container">
-
+                  <div class="productos-container-wrapper">
+                      <!-- botón anterior del carrusel-->
+                      <button class="productos-control-prev" type="button" id="lavado-prev">
+                          <i class="bi bi-chevron-left"></i>
+                          <span class="visually-hidden">Anterior</span>
+                      </button>
+                      
+                      <div class="productos-container">
+                      <!-- Producto 1 -->
                <a href="../productos/electrodomesticos/lavado/lavadora_frigidaire.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/lavado/lavadora/lavadora_frigidaire.png" alt="Lavadora Frigidaire" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_frigidaire.png" alt="Lavadora Frigidaire" loading="lazy">
           <h3>Lavadora Frigidaire</h3>
           <p>Precio: $35,000</p>
           <button class="btn-agregar" id="lavadora_frigidaire">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 2 -->
       <a href="../productos/electrodomesticos/lavado/lavadora_tecnomaster.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/lavado/Lavadora y Secadora/Lavadora_y_secadora_tecnomaster.png" alt="Lavadora y Secadora Tecnomaster" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/lavado/Lavadora y Secadora/Lavadora_y_secadora_tecnomaster.png" alt="Lavadora y Secadora Tecnomaster" loading="lazy">
           <h3>Lavadora y Secadora Tecnomaster</h3>
           <p>Precio: $40,000</p>
           <button class="btn-agregar" id="lavadora_y_secadora_tecnomaster">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 3 -->
       <a href="../productos/electrodomesticos/lavado/lavadora_lg.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/lavado/lavadora/lavadora_LG.avif" alt="Lavadora LG" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_LG.avif" alt="Lavadora LG" loading="lazy">
           <h3>Lavadora LG</h3>
           <p>Precio: $53,000</p>
           <button class="btn-agregar" id="lavadora_lg">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 4 -->
       <a href="../productos/electrodomesticos/lavado/lavadora_secadora_lg.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/lavado/Lavadora y Secadora/Lavadora_y_secadora_LG.avif" alt="Lavadora y Secadora LG" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/lavado/Lavadora y Secadora/Lavadora_y_secadora_LG.avif" alt="Lavadora y Secadora LG" loading="lazy">
           <h3>Lavadora y Secadora LG</h3>
           <p>Precio: $55,000</p>
           <button class="btn-agregar" id="lavadora_y_secadora_lg">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 5 -->
       <a href="../productos/electrodomesticos/lavado/lavadora_dimensions.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/lavado/lavadora/lavadora_dimensions.png" alt="Lavadora Dimensions" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/lavado/lavadora/lavadora_dimensions.png" alt="Lavadora Dimensions" loading="lazy">
           <h3>Lavadora Dimensions</h3>
           <p>Precio: $10,000</p>
           <button class="btn-agregar" id="lavadora_dimensions">Agregar</button>
         </article>
       </a>
 
-            </div>
-      </section>
+                      </div>
+                      
+                      <!-- botón siguiente del carrusel-->
+                      <button class="productos-control-next" type="button" id="lavado-next">
+                          <i class="bi bi-chevron-right"></i>
+                          <span class="visually-hidden">Siguiente</span>
+                      </button>
+                  </div>
+              </div>
+          </section>
 
 
        <!-- Climatización -->
           <section class="productos-destacados destino reveal" id="climatizacion">
-             <h2>Climatización</h2>
+              <div class="container">
+                  <h2>Climatización</h2>
 
-             <div class="productos-container">
-
+                  <div class="productos-container-wrapper">
+                      <!-- botón anterior del carrusel-->
+                      <button class="productos-control-prev" type="button" id="climatizacion-prev">
+                          <i class="bi bi-chevron-left"></i>
+                          <span class="visually-hidden">Anterior</span>
+                      </button>
+                      
+                      <div class="productos-container">
+                      <!-- Producto 1 -->
                <a href="../productos/electrodomesticos/climatizacion/ventilador_daiwa.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_Daiwa.png" alt="Ventilador Daiwa" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_Daiwa.png" alt="Ventilador Daiwa" loading="lazy">
           <h3>Ventilador Daiwa</h3>
           <p>Precio: $15,000</p>
           <button class="btn-agregar" id="ventilador_daiwa">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 2 -->
       <a href="../productos/electrodomesticos/climatizacion/aire_acondicionado_whirlpool.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_whirlpool.png" alt="Aire Acondicionado Whirlpool" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_whirlpool.png" alt="Aire Acondicionado Whirlpool" loading="lazy">
           <h3>Aire Acondicionado Whirlpool</h3>
           <p>Precio: $40,000</p>
           <button class="btn-agregar" id="aire_acondicionado_whirlpool">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 3 -->
       <a href="../productos/electrodomesticos/climatizacion/aire_acondicionado_tecnomaster.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_tecnomaster.png" alt="Aire Acondicionado Tecnomaster" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/climatizacion/aire_acondicionado/aire_acondicionado_tecnomaster.png" alt="Aire Acondicionado Tecnomaster" loading="lazy">
           <h3>Aire Acondicionado Tecnomaster</h3>
           <p>Precio: $33,000</p>
           <button class="btn-agregar" id="aire_acondicionado_tecnomaster">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 4 -->
       <a href="../productos/electrodomesticos/climatizacion/ventilador_kdk.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_KDK.avif" alt="Ventilador KDK" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_KDK.avif" alt="Ventilador KDK" loading="lazy">
           <h3>Ventilador KDK</h3>
           <p>Precio: $6,000</p>
           <button class="btn-agregar" id="ventilador_kdk">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 5 -->
       <a href="../productos/electrodomesticos/climatizacion/ventilador_techo_kdk.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/climatizacion/ventiladores_de_techo/ventilador_de_techo_KDK.avif" alt="Ventilador de Techo KDK" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/climatizacion/ventiladores_de_techo/ventilador_de_techo_KDK.avif" alt="Ventilador de Techo KDK" loading="lazy">
           <h3>Ventilador de Techo KDK</h3>
           <p>Precio: $20,000</p>
           <button class="btn-agregar" id="ventilador_de_techo_kdk">Agregar</button>
         </article>
       </a>
-
+                      <!-- Producto 6 -->
       <a href="../productos/electrodomesticos/climatizacion/ventilador_pequeno.html">
         <article class="producto">
-          <img src="../imagenes/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_pequeño.png" alt="Ventilador Pequeño" loading="lazy">
+          <img src="../assets/images/productos/Electrodomesticos/climatizacion/ventiladores/ventilador_pequeño.png" alt="Ventilador Pequeño" loading="lazy">
           <h3>Ventilador Pequeño</h3>
           <p>Precio: $8,000</p>
           <button class="btn-agregar" id="ventilador_pequeno">Agregar</button>
         </article>
       </a>
 
-            </div>
-      </section>
+                      </div>
+                      
+                      <!-- botón siguiente del carrusel-->
+                      <button class="productos-control-next" type="button" id="climatizacion-next">
+                          <i class="bi bi-chevron-right"></i>
+                          <span class="visually-hidden">Siguiente</span>
+                      </button>
+                  </div>
+              </div>
+          </section>
 
 
     </main>

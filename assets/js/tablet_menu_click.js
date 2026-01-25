@@ -1,6 +1,7 @@
 // Menú multinivel por clic para tablets (768px - 1199px)
 // Rango: Tablets estándar incluyendo iPad en modo retrato y landscape
 // Cubre: iPad Mini (768-1024px), iPad Air (820-1180px), iPad Pro 11" (834-1194px)
+// También cubre Surface Go (768-1366px), Samsung Galaxy Tab (800-1280px), Google Nest Hub (1024-1280px)
 document.addEventListener('DOMContentLoaded', function() {
     // Detectar si está en el rango de tablets
     function isTablet() {
@@ -15,6 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Encontrar todos los enlaces que tienen submenús
     const nivel2Links = document.querySelectorAll('.nav-links > ul > li:has(ul) > a');
     const nivel3Links = document.querySelectorAll('.nav-links > ul > li > ul > li:has(ul) > a');
+    
+    console.log('Enlaces nivel 2 encontrados:', nivel2Links.length);
+    console.log('Enlaces nivel 3 encontrados:', nivel3Links.length);
+    nivel2Links.forEach((link, i) => console.log(`Nivel 2 ${i}:`, link.textContent.trim()));
+    nivel3Links.forEach((link, i) => console.log(`Nivel 3 ${i}:`, link.textContent.trim()));
     
     // Agregar botón "Ver todos los productos" a cada submenú de nivel 3
     function agregarVerTodosLosProductos() {
@@ -82,16 +88,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Llamar a la función para agregar los botones
     agregarVerTodosLosProductos();
     
-    // Manejar clics en nivel 2
-    nivel2Links.forEach(link => {
+    // Manejar clics en nivel 2 - SOLO abrir submenú, no navegar
+    console.log('Agregando event listeners a nivel 2...');
+    nivel2Links.forEach((link, index) => {
+        console.log(`Configurando listener para nivel 2 ${index}:`, link.textContent.trim());
         link.addEventListener('click', function(e) {
+            console.log('Click detectado en nivel 2:', this.textContent.trim());
             e.preventDefault();
             e.stopPropagation();
             
             const parentLi = this.parentElement;
             const submenu = parentLi.querySelector('ul');
             
-            if (!submenu) return;
+            if (!submenu) {
+                console.log('No se encontró submenú para:', this.textContent.trim());
+                return;
+            }
             
             // Cerrar todos los demás submenús de nivel 2
             document.querySelectorAll('.nav-links > ul > li > ul').forEach(otherSubmenu => {
@@ -107,7 +119,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Manejar clics en nivel 3
+    console.log('Event listeners de nivel 2 configurados');
+    
+    // Manejar clics en nivel 3 - SOLO abrir submenú, no navegar
     nivel3Links.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();

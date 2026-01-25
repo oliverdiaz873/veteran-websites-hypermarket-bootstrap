@@ -1223,6 +1223,54 @@ main .container {
     flex-shrink: 0;
 }
 
+/* Eliminar text-decoration de enlaces dentro de productos */
+.productos-destacados .productos-container,
+.productos-destacados .productos-container * {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.productos-destacados .productos-container a,
+.productos-destacados .productos-container a * {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/* Estilos específicos para h3 y p dentro de enlaces de productos */
+section.productos-destacados .productos-container .producto a h3,
+section.productos-destacados .producto a h3,
+.productos-destacados .productos-container .producto a h3,
+.productos-destacados .producto a h3,
+section.productos-destacados div.productos-container article.producto a h3,
+section.productos-destacados article.producto a h3 {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: inherit !important;
+    text-decoration-line: none !important;
+    text-decoration-style: none !important;
+    text-decoration-color: unset !important;
+    text-decoration-thickness: unset !important;
+    text-underline-offset: unset !important;
+    text-underline-position: unset !important;
+}
+
+section.productos-destacados .productos-container .producto a p,
+section.productos-destacados .producto a p,
+.productos-destacados .productos-container .producto a p,
+.productos-destacados .producto a p,
+section.productos-destacados div.productos-container article.producto a p,
+section.productos-destacados article.producto a p {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: inherit !important;
+    text-decoration-line: none !important;
+    text-decoration-style: none !important;
+    text-decoration-color: unset !important;
+    text-decoration-thickness: unset !important;
+    text-underline-offset: unset !important;
+    text-underline-position: unset !important;
+}
+
 /* Espacio flexible para el nombre del producto */
 .productos-destacados .producto h3 {
     flex-grow: 1;
@@ -1498,29 +1546,28 @@ main .container {
 
 /* Para Firefox */
 .productos-destacados .productos-container {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255,204,0,0.8) rgba(255,255,255,0.1);
+scrollbar-width: thin;
+scrollbar-color: rgba(255,204,0,0.8) rgba(255,255,255,0.1);
 }
 
 /* Contenedor de contenido del producto */
 .productos-destacados .producto-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: space-between;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+justify-content: space-between;
 }
-
 
 /* Imagen del producto */
 .productos-destacados .producto img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    object-fit: cover;
+width: 100%;
+border-radius: 10px;
+margin-bottom: 10px;
+object-fit: cover;
 }
 
 .productos-destacados .producto:hover img {
-    transform: scale(1.05);
+transform: scale(1.05);
 }
 
 /* Nombre del producto*/

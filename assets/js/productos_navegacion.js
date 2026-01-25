@@ -14,6 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
     setupCarousel('bebidas');
     setupCarousel('enlatados');
     
+    // Configurar para secciones de Electrodomésticos
+    setupCarousel('cocina');
+    setupCarousel('lavado');
+    setupCarousel('climatizacion');
+    
+    // Configurar para secciones de Farmacia
+    setupCarousel('analgesicos');
+    setupCarousel('dermocosmetica');
+    setupCarousel('vitaminas_y_minerales');
+    setupCarousel('antigripales_y_resfriado');
+    
     function setupCarousel(type) {
         const container = document.querySelector(`#${type}.productos-destacados .productos-container`) || 
                          document.querySelector(`.productos-destacados .productos-container`);

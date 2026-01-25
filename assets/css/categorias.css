@@ -17,14 +17,28 @@ main {
 /* Espacio adicional para separar secciones del header y el breadcrumb - Tablets e iPads */
 @media (min-width: 768px) and (max-width: 1023px) {
     main {
-        padding-top: 120px !important;
+        padding-top: 130px !important;
     }
 }
 
-/* Espacio adicional para separar secciones del header y el breadcrumb - Desktop */
-@media (min-width: 1024px) {
+/* Espacio adicional para separar secciones del header y el breadcrumb - ipad pro (1024px - 1127px) */
+@media (min-width: 1024px) and (max-width: 1127px) {
+    main {
+        padding-top: 130px !important;
+    }
+}
+
+/* Espacio adicional para separar secciones del header y el breadcrumb - Desktop grande (1128px en adelante) */
+@media (min-width: 1128px) and (max-width: 2000px) {
     main {
         padding-top: 85px !important;
+    }
+}
+
+/* Espacio adicional para separar secciones del header y el breadcrumb - Ultra grande (más de 2000px) */
+@media (min-width: 2001px) {
+    main {
+        padding-top: 125px !important;
     }
 }
 
@@ -128,7 +142,7 @@ main {
   top: 55px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  z-index: 9999 !important;
+  z-index:  100;
 }
 
 /* Tablets y pantallas medianas (768px en adelante) */
@@ -187,6 +201,7 @@ main {
 .destino {
     scroll-margin-top: 155px; 
 }
+
 
 
 

@@ -118,10 +118,7 @@ main {
 }
 
 
-
-
-
-/* Estilos generales del breadcrumb - Mobile First */
+/* Estilos generales del breadcrumb - Mobile First ------------------------------- */
 .breadcrumb {
   display: inline-block !important;
   width: auto !important;

@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Delegación de eventos para agregar productos ===
     // === Delegación de eventos para agregar productos (FUENTE ÚNICA) ===
     document.addEventListener('click', e => {
-        const btn = e.target.closest('.btn-agregar');
+        const btn = e.target.closest('.btn-agregar, .btn-agregar-producto');
         if (!btn) return;
 
         e.preventDefault();

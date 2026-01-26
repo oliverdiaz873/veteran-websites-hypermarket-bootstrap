@@ -1,0 +1,473 @@
+﻿:root {
+    --color-primary: #ffcc00;
+    --color-primary-hover: #ffe57c;
+    --color-dark: #000000;
+    --color-white: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.85);
+    --bg-overlay-darker: rgba(0, 0, 0, 0.8);
+    --radius-pill: 100px;
+    --btn-width-desktop: 130px;
+    --btn-height-desktop: 35px;
+    --btn-width-mobile: 60%;
+    --btn-margin-mobile: 20px auto;
+    --breadcrumb-top-base: 65px;
+    --breadcrumb-top-desktop: 75px;
+    --container-max-width-desktop: 1100px;
+}
+
+/* Fondos */
+#fondo_muebles_y_decoracion {
+    background-image: url('../images/fondos/fondo_m.jpg');
+}
+
+#fondo_alimentos {
+    background-image: url('../images/fondos/fondo.avif');
+}
+
+#fondo_electrodomesticos {
+    background-image: url('../images/fondos/electrodomesticos.jpg');
+}
+
+#fondo_tecnologia {
+    background-image: url('../images/fondos/tecnologia.jpg');
+}
+
+#fondo_ropa {
+    background-image: url('../images/fondos/ropa.jpg');
+}
+
+#fondo_farmacia {
+    background-image: url('../images/fondos/farmacia.jpg');
+}
+
+#ferreteria {
+    background-image: url('../images/fondos/ferreteria.jpg');
+}
+
+
+/* main - mobile first*/
+.producto-main {
+    padding-top: 120px;
+    /* Espacio para header fijo + breadcrumb */
+    margin-top: 50px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+/* Sección principal del producto */
+.producto-detalle {
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-color: var(--bg-overlay-darker);
+    max-width: 3000px;
+    margin: 0 auto 40px auto;
+    border-radius: 20px;
+}
+
+/* Contenedor del producto (imagen + info) */
+.contenedor-producto {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+/* Contenedor de la imagen */
+.imagen-producto {
+    flex: 0 0 400px;
+    max-width: 400px;
+}
+
+/* ========================== MEDIA QUERIES ========================== */
+
+/* Responsive para páginas de productos - MÓVIL (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .producto-main {
+        padding-top: 75px;
+        /* Reducido para acercar más al breadcrumb en móvil */
+    }
+
+    .producto-detalle {
+        padding: 20px 15px;
+        margin: 0 auto 30px auto;
+        margin-top: 0px;
+    }
+
+    .contenedor-producto {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .imagen-producto {
+        flex: 1;
+        max-width: 100%;
+        width: 100%;
+        padding: 0 20px;
+        /* Padding lateral en móvil */
+        box-sizing: border-box;
+    }
+
+    .info-producto {
+        flex: 1;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .info-producto h1 {
+        font-size: 2em;
+    }
+
+    .info-producto .precio {
+        font-size: 1.5em;
+    }
+
+    .info-producto .descripcion {
+        font-size: 1em;
+        text-align: left;
+        padding-left: 5px;
+    }
+
+    .info-producto ul {
+        text-align: left !important;
+        padding-left: 20px !important;
+        margin: 10px 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .info-producto ul li {
+        text-align: left !important;
+        margin: 5px 0 !important;
+        padding-left: 0 !important;
+        text-indent: 0 !important;
+        list-style-position: outside !important;
+        line-height: 1.4 !important;
+    }
+
+    .btn-agregar-producto {
+        width: var(--btn-width-mobile) !important;
+        margin: var(--btn-margin-mobile) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .producto-detalle {
+        padding: 15px 10px;
+    }
+
+    .info-producto h1 {
+        font-size: 1.8em;
+    }
+
+    .info-producto .precio {
+        font-size: 1.3em;
+    }
+
+    .detalles li {
+        font-size: 0.9em;
+    }
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.imagen-producto img:hover {
+    transform: scale(1.05);
+}
+
+/* Contenedor de la información */
+.info-producto {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    color: white;
+}
+
+.info-producto h1 {
+    font-size: 2.0em;
+    margin-bottom: 14px;
+
+}
+
+.info-producto .precio {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.info-producto .descripcion {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Lista de detalles */
+.detalles {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.detalles li {
+    padding: 4px 0;
+    font-size: 1.1em;
+}
+
+.detalles li:last-child {
+    border-bottom: none;
+}
+
+.detalles li::before {
+    content: "✓ ";
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Botón agregar */
+.btn-agregar-producto {
+    margin: 10px 0;
+    margin-top: 10px;
+    width: var(--btn-width-desktop) !important;
+    height: var(--btn-height-desktop) !important;
+    color: var(--color-dark) !important;
+    background-color: var(--color-primary);
+    font-weight: bold !important;
+    cursor: pointer !important;
+    border-radius: var(--radius-pill) !important;
+    outline: none !important;
+    padding: 0.5rem !important;
+    margin-bottom: 3px !important;
+    border: none !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    transition: background 0.3s !important;
+    align-self: center !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+main .producto-main .producto-detalle .info-producto .btn-agregar-producto:hover {
+    background-color: var(--color-primary-hover) !important;
+}
+
+/* Botón agregar de la sección de productos similares con ancho del 40% */
+.producto .btn-agregar {
+    width: 40%;
+}
+
+/* breadcrumb - Mobile First con Truncamiento Inteligente -------------------------
+   Progressive disclosure breadcrumb: Muestra categoría principal en móvil,
+   oculta niveles intermedios con "..." y muestra ruta completa en desktop.
+   Móvil: Inicio › Alimentos › ... › Coca Cola
+   Desktop: Inicio › Alimentos › Bebidas › Coca Cola
+-------------------------------------------------------------------------- */
+.breadcrumb {
+    background: var(--bg-overlay) !important;
+    padding: 8px 15px !important;
+    border-radius: 10px !important;
+    font-family: Arial, sans-serif;
+    font-size: 14px !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+    margin: 8px auto !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 90% !important;
+
+    /* Centrado perfecto bajo el header fijo */
+    position: fixed;
+    top: var(--breadcrumb-top-base);
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 100;
+}
+
+/* Enlaces intermedios ocultos en móvil */
+.breadcrumb .truncate-mobile {
+    display: none !important;
+}
+
+/* Mostrar "..." en móvil */
+.breadcrumb .ellipsis-mobile::before {
+    content: "..." !important;
+    color: #ffffff !important;
+    margin: 0 5px !important;
+}
+
+/* Mostrar "..." solo en móvil */
+.breadcrumb .ellipsis-mobile {
+    display: inline !important;
+}
+
+/* Enlaces dentro del breadcrumb */
+.breadcrumb a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Separadores (›) */
+.breadcrumb span,
+.breadcrumb a {
+    margin: 0 5px;
+}
+
+/* Página actual */
+.breadcrumb .actual {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* Tablet (768px en adelante) */
+@media (min-width: 768px) {
+    .producto-main {
+        padding-top: 100px !important;
+        /* Espacio intermedio para tablet */
+        margin-top: 40px !important;
+        /* Margin superior para tablet */
+        max-width: 100% !important;
+        /* Permitir ancho completo para carrusel */
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .producto-detalle {
+        padding: 50px 30px !important;
+        /* Padding intermedio para tablet */
+        max-width: 1000px !important;
+        margin: 0 auto 50px auto !important;
+    }
+
+    .contenedor-producto {
+        gap: 50px !important;
+        /* Separación intermedia para tablet */
+        padding-top: 15px !important;
+    }
+
+    .breadcrumb {
+        font-size: 15px !important;
+        padding: 10px 20px !important;
+        max-width: 95% !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+    }
+
+    /* Mostrar todos los elementos en tablet */
+    .breadcrumb .truncate-mobile {
+        display: inline !important;
+    }
+
+    /* Ocultar "..." en tablet */
+    .breadcrumb .ellipsis-mobile {
+        display: none !important;
+    }
+}
+
+/* Modal sin JavaScript usando :target --------------------------------------*/
+.modal-imagen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-overlay);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+    z-index: 9999;
+}
+
+/* MODAL AJUSTADO A LA PANTALLA */
+.modal-imagen img {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Cuando se activa con el hash en la URL */
+.modal-imagen:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Botón invisible para cerrar al hacer clic fuera */
+.modal-imagen .cerrar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ========================== MEDIA QUERIES (DESKTOP & TABLET OVERRIDES) ========================== */
+
+/* Desktop (1024px en adelante) */
+@media (min-width: 1024px) {
+    .producto-main {
+        margin-top: 35px !important;
+    }
+
+    .producto-detalle {
+        max-width: var(--container-max-width-desktop) !important;
+        padding: 60px 100px !important;
+    }
+
+    .breadcrumb {
+        font-size: 14px !important;
+        padding: 8px 20px;
+        max-width: 70% !important;
+        border-radius: 10px !important;
+        top: var(--breadcrumb-top-desktop) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+    }
+
+    .breadcrumb .truncate-mobile {
+        display: inline !important;
+    }
+
+    .breadcrumb .ellipsis-mobile {
+        display: none !important;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .breadcrumb {
+        top: var(--breadcrumb-top-base) !important;
+    }
+}
+
+/* ========================== SECCIÓN PRODUCTOS SIMILARES ========================== */
+/* Ajustar la sección para que coincida con el index (5 productos) */
+.productos-destacados {
+    max-width: 1280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

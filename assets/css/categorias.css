@@ -45,7 +45,7 @@ main {
 
 /* Fondos */
 #fondo_muebles_y_decoracion {
-    background-image: url('/assets/images/fondos/fondo_m.jpg') !important;
+    background-image: url('../images/fondos/fondo_m.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -54,7 +54,7 @@ main {
 }
 
 #fondo_alimentos {
-    background-image: url('/assets/images/fondos/fondo.avif') !important;
+    background-image: url('../images/fondos/fondo.avif') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -64,7 +64,7 @@ main {
 }
 
 #fondo_electrodomesticos {
-    background-image: url('/assets/images/fondos/electrodomesticos.jpg') !important;
+    background-image: url('../images/fondos/electrodomesticos.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -73,7 +73,7 @@ main {
 }
 
 #fondo_tecnologia {
-    background-image: url('/assets/images/fondos/tecnologia.jpg') !important;
+    background-image: url('../images/fondos/tecnologia.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -82,7 +82,7 @@ main {
 }
 
 #fondo_ropa {
-    background-image: url('/assets/images/fondos/ropa.jpg') !important;
+    background-image: url('../images/fondos/ropa.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -91,7 +91,7 @@ main {
 }
 
 #fondo_farmacia {
-    background-image: url('/assets/images/fondos/farmacia.jpg') !important;
+    background-image: url('../images/fondos/farmacia.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -100,7 +100,16 @@ main {
 }
 
 #ferreteria {
-    background-image: url('/assets/images/fondos/ferreteria.jpg') !important;
+    background-image: url('../images/fondos/ferreteria.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+}
+
+#fondo_ferreteria {
+    background-image: url('../images/fondos/ferreteria.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -109,7 +118,7 @@ main {
 }
 
 #fondo_juguetes {
-    background-image: url('/assets/images/fondos/fondo_muebles_y_decoracion.jpg') !important;
+    background-image: url('../images/fondos/fondo_m.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;

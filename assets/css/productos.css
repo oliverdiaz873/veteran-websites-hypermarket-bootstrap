@@ -17,31 +17,75 @@
 
 /* Fondos */
 #fondo_muebles_y_decoracion {
-    background-image: url('../images/fondos/fondo_m.jpg');
+     background-image: url('../images/fondos/fondo_m.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+}
+
+#fondo_juguetes {
+    background-image: url('../images/fondos/fondo_m.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
 }
 
 #fondo_alimentos {
-    background-image: url('../images/fondos/fondo.avif');
+    background-image: url('../images/fondos/fondo.avif') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
 }
 
 #fondo_electrodomesticos {
-    background-image: url('../images/fondos/electrodomesticos.jpg');
+     background-image: url('../images/fondos/electrodomesticos.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
 }
 
 #fondo_tecnologia {
-    background-image: url('../images/fondos/tecnologia.jpg');
+    background-image: url('../images/fondos/tecnologia.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
 }
 
 #fondo_ropa {
-    background-image: url('../images/fondos/ropa.jpg');
+    background-image: url('../images/fondos/ropa.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
 }
 
 #fondo_farmacia {
-    background-image: url('../images/fondos/farmacia.jpg');
+    background-image: url('../images/fondos/farmacia.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
 }
 
 #ferreteria {
-    background-image: url('../images/fondos/ferreteria.jpg');
+    background-image: url('../images/fondos/ferreteria.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
 }
 
 

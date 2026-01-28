@@ -354,8 +354,9 @@ main .producto-main .producto-detalle .info-producto .btn-agregar-producto:hover
     .producto-detalle {
         padding: 50px 30px !important;
         /* Padding intermedio para tablet */
-        max-width: 1000px !important;
+        max-width: 700px !important;
         margin: 0 auto 50px auto !important;
+
     }
 
     .contenedor-producto {

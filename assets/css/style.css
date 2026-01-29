@@ -959,13 +959,13 @@ main .container {
     .productos-destacados .producto h3 {
         font-size:16px !important;
         min-height: 35px !important;
-        max-height: 42px !important; /* un poco más para 2 líneas completas */
+        max-height: 40px !important; /* espacio ajustado para 2 líneas forzando puntos suspensivos limpios */
         overflow: hidden !important;
         display: -webkit-box !important;
         -webkit-line-clamp: 2 !important; /* máximo 2 líneas - esto ya muestra "..." */
         -webkit-box-orient: vertical !important;
         margin-bottom: 0px !important; /* controlar separación con precio */
-        line-height: 1 !important; /* altura de línea controlada */
+        line-height: 1.2 !important; /* altura de línea adecuada para 2 líneas */
     }
     
     .productos-destacados .producto p {

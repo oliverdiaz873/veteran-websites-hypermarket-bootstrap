@@ -1,8 +1,5 @@
 
 
-
-
-
 /* ===============================
    CONTENEDOR
 ================================ */
@@ -124,16 +121,16 @@
    SIN RESULTADOS
 ================================ */
 .sin-resultados {
-     display: inline-flex;      /* 🔥 clave */
+     display: inline-flex;      /* clave */
     align-items: center;
     justify-content: center;
-    width: fit-content;        /* 🔥 se ajusta al texto */
+    width: fit-content;        /* se ajusta al texto */
     max-width: 90%;
     padding: 10px 25px;
     font-size: 40px;
     font-weight: 500;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
     margin: 40px auto 0;
     text-align: center;
@@ -166,5 +163,73 @@
 }
 .btn-agregar:hover {
     background-color: #ffdd53;
+}
+
+/* ==================== MEDIA QUERY PARA MÓVIL ==================== */
+@media (max-width: 767.98px) {
+    /* Main contenedor para móvil */
+    .contenedor-resultados {
+        padding: 0 15px;
+        margin: 80px auto 20px auto; /* Espacio para header fijo */
+        max-width: 100%;
+    }
+    
+    /* Título para móvil */
+    #titulo-resultados {
+        font-size: 20px;
+        margin-bottom: 25px;
+        margin-top: 0;
+        padding: 8px 16px;
+    }
+    
+    /* Grid para móvil */
+    .lista-resultados {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
+    }
+    
+    /* Tarjetas para móvil */
+    .resultado-card {
+        border-radius: 8px;
+    }
+    
+    /* Imágenes en móvil */
+    .resultado-card img {
+        height: 140px;
+        padding: 8px;
+    }
+    
+    /* Info de la tarjeta en móvil */
+    .resultado-info {
+        padding: 12px;
+    }
+    
+    .resultado-info h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        min-height: 35px;
+    }
+    
+    .resultado-precio {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    
+    /* Botón agregar en móvil */
+    .btn-agregar {
+        width: 80%;
+        height: 40px;
+        font-size: 14px;
+        padding: 0.6rem;
+        margin-top: 10px;
+    }
+    
+    /* Mensaje sin resultados en móvil */
+    .sin-resultados {
+        font-size: 28px;
+        padding: 15px 20px;
+        margin: 30px auto 0;
+        max-width: 95%;
+    }
 }
 

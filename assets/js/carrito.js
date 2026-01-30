@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="item-carrito" data-id="${escapeHtml(p.id)}">
                     <div class="carrito-item-info">
                         ${p.url
-                    ? `<a href="${escapeHtml(p.url)}" class="carrito-link">${contenido}</a>`
+                    ? `<a href="${getRelativePrefix() + escapeHtml(p.url)}" class="carrito-link">${contenido}</a>`
                     : contenido}
                         <div>RD$ ${p.precio.toLocaleString()}</div>
                     </div>
@@ -175,3 +175,41 @@ document.addEventListener('DOMContentLoaded', () => {
     actualizarUI();
 });
 
+// Función para obtener el prefijo relativo según la profundidad del directorio
+function getRelativePrefix() {
+    const path = window.location.pathname;
+
+    if (path.includes('/productos/')) {
+        const parts = path.split('/productos/');
+        if (parts.length > 1) {
+            const subPath = parts[1];
+            const depth = subPath.split('/').length - 1;
+            let up = '../';
+            for (let i = 0; i < depth; i++) up += '../';
+            return up;
+        }
+        return '../';
+    }
+
+    if (path.includes('/categorias/')) {
+        return '../';
+    }
+
+    if (path.includes('/pages/search/')) {
+        return '../../';
+    }
+
+    if (path.includes('/pages/cart/')) {
+        return '../../../';
+    }
+
+    if (path.includes('/legal/')) {
+        return '../';
+    }
+
+    if (path.includes('/contacto/')) {
+        return '../';
+    }
+
+    return ''; // Root
+}

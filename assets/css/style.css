@@ -231,6 +231,39 @@ header {
     font-size: 14px; /* Enlaces más pequeños */
     padding: 3px 6px; /* Menos padding */
   }
+  
+  /* ==================== BUSCADOR PARA TABLETS ==================== */
+  /* Estilos del contenedor de resultados para tablets */
+  .resultados-busqueda {
+    background-color: rgba(0,0,0,0.95) !important;
+    color: white !important;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    max-height: 250px; /* Altura intermedia entre desktop y móvil */
+  }
+  
+  /* Items de resultados para tablets */
+  .resultados-busqueda li {
+    color: white !important;
+    padding: 10px 12px; /* Padding intermedio */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .resultados-busqueda li:hover {
+    background-color: rgba(255,255,255,0.1) !important;
+  }
+  
+  .resultados-busqueda li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Forzar color blanco en todos los elementos anidados */
+  .resultados-busqueda li *,
+  .resultados-busqueda li span,
+  .resultados-busqueda li div,
+  .resultados-busqueda li a {
+    color: white !important;
+  }
 }
 
 /* ======================== Móvil (<768px) ======================== */
@@ -342,8 +375,8 @@ header {
     left: 0 !important;
     width: 100% !important;
     max-width: calc(100vw - 20px) !important;  /* Considerar padding del header */
-    background-color: white !important;
-    color: black !important;  /* Texto visible */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white !important;  /* Texto visible */
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     list-style: none;
@@ -392,18 +425,23 @@ header {
     .resultados-busqueda.mostrar-resultados li:hover {
       background-color: rgba(255,255,255,0.1) !important;  /* Hover sutil */
     }
+    
+    /* Regla adicional para asegurar color blanco en todos los casos */
+    body.menu-busqueda-activa .resultados-busqueda.mostrar-resultados li {
+      color: white !important;
+    }
   }
   
   body.menu-busqueda-activa .resultados-busqueda li {
     padding: 12px 15px;  /* Más padding para tactil */
     cursor: pointer;
     transition: background-color 0.2s;
-    border-bottom: 1px solid #eee;  /* Separación visual */
-    color: black;  /* Texto negro */
+    border-bottom: 1px solid rgba(255,255,255,0.1);  /* Separación visual */
+    color: white !important;  /* Texto blanco */
   }
-  
+  /* hover al hacer clic en la lista de coincidencias en movil */
   body.menu-busqueda-activa .resultados-busqueda li:hover {
-    background-color: #f5f5f5;
+    background-color: rgba(255,255,255,0.1) !important;
   }
   
   body.menu-busqueda-activa .resultados-busqueda li:last-child {
@@ -536,25 +574,6 @@ header {
     z-index: 10000 !important;
 }
 
-.nav-links-mobile .resultados-busqueda {
-    position: fixed !important;
-    top: auto !important;
-    bottom: auto !important;
-    left: 0 !important;
-    width: 100vw !important;
-    z-index: 10001 !important;
-    background-color: white !important;
-    color: black !important;
-    border-radius: 0 !important;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.3) !important;
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    max-height: 200px !important;
-    overflow-y: auto !important;
-    display: none !important;
-}
-
 /* Scrollbar personalizado para Chrome/Webkit */
 .nav-links-mobile::-webkit-scrollbar {
     width: 6px;
@@ -667,7 +686,7 @@ header {
  
 
  
-/* Clase que activa la animación del submenú */
+/* Clase que activa la animación del submenú en desktop*/
 
 /* Submenú abierto */
 .nav-links-mobile li.show > ul {
@@ -686,8 +705,8 @@ header {
   left: 0 !important;
   width: 100% !important;
   z-index: 10001 !important;
-  background-color: white !important;
-  color: black !important;
+  background-color: rgba(0,0,0,0.95) !important;
+  color: white !important;
   border-radius: 5px !important;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
   list-style: none !important;
@@ -706,13 +725,13 @@ header {
   padding: 12px 15px !important;
   cursor: pointer !important;
   transition: background-color 0.2s !important;
-  border-bottom: 1px solid #eee !important;
-  color: black !important;
-  background-color: white !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+  color: white !important;
+  background-color: transparent !important;
 }
 
 .nav-links-mobile .resultados-busqueda li:hover {
-  background-color: #f5f5f5 !important;
+  background-color: rgba(255,255,255,0.1) !important;
 }
 
 .nav-links-mobile .resultados-busqueda li:last-child {
@@ -799,8 +818,8 @@ header {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: white;
-    color: black;  /* Texto negro visible */
+    background-color: rgba(0,0,0,0.95);
+    color: white;  /* Texto blanco visible */
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     list-style: none;
@@ -821,7 +840,15 @@ header {
     padding: 8px 12px;
     cursor: pointer;
     transition: background-color 0.2s;
-    color: black;  /* Asegurar texto negro */
+    color: white !important;  /* Texto blanco para desktop y móvil con máxima prioridad */
+}
+
+/* Regla adicional para asegurar color blanco en todos los casos */
+.resultados-busqueda li *,
+.resultados-busqueda li span,
+.resultados-busqueda li div,
+.resultados-busqueda li a {
+    color: white !important;
 }
 
 /* Layout para resultados con imagen */
@@ -836,7 +863,7 @@ header {
 }
 
 .resultados-busqueda li:hover {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.1);
 }
 
 /* Activar buscador: input visible, ocultar botones de navegación pero mantener logo/h1 y carrito */
@@ -971,12 +998,34 @@ main .container {
 /* Animación de scroll de la sección de ofertas - Solo fade-in */
 .reveal {
   opacity: 0;
-  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Clase que activa la animación */
 .reveal.active {
   opacity: 1;
+}
+
+/* Scroll suave para secciones y su posicionamiento */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Resaltado de sección cuando se navega a ella */
+.section-highlighted {
+  animation: sectionPulse 2s ease-in-out;
+}
+
+@keyframes sectionPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(255, 204, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 204, 0, 0);
+  }
 }
 
 /* Sección Productos Destacados y ofertas */
@@ -1141,6 +1190,44 @@ main .container {
         padding-top: 100px !important;
     }
     
+    /* ==================== BUSCADOR PARA TABLETS/IPADS ==================== */
+    /* Estilos del contenedor de resultados para tablets/iPads */
+    .resultados-busqueda {
+        background-color: rgba(0,0,0,0.95) !important;
+        color: white !important;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        max-height: 280px !important;
+    }
+    
+    /* Items de resultados para tablets/iPads */
+    .resultados-busqueda li {
+        color: white !important;
+        padding: 11px 13px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    }
+    
+    .resultados-busqueda li:hover {
+        background-color: rgba(255,255,255,0.1) !important;
+    }
+    
+    .resultados-busqueda li:last-child {
+        border-bottom: none !important;
+    }
+    
+    /* Forzar color blanco en todos los elementos anidados */
+    .resultados-busqueda li *,
+    .resultados-busqueda li span,
+    .resultados-busqueda li div,
+    .resultados-busqueda li a {
+        color: white !important;
+    }
+    
+    /* MOSTRAR RESULTADOS DE BÚSQUEDA EN TABLETS */
+    .nav-links-mobile .resultados-busqueda.mostrar-resultados {
+        display: block !important;
+    }
+    
     /* Agregar márgenes laterales para tablets */
     .productos-destacados {
         margin-left: 20px !important;
@@ -1262,6 +1349,77 @@ main .container {
     /* Ajustar header para tablets grandes */
     header {
         top: 15px !important;
+    }
+}
+
+/* ==================== iPADS ESPECÍFICOS (TODOS LOS MODELOS) ==================== */
+/* iPad Mini, iPad Air, iPad Pro 11", iPad (9.7") */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    .resultados-busqueda {
+        background-color: rgba(0,0,0,0.95) !important;
+        color: white !important;
+        border-radius: 5px !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+        max-height: 280px !important;
+    }
+    
+    .resultados-busqueda li {
+        color: white !important;
+        padding: 11px 13px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    }
+    
+    .resultados-busqueda li:hover {
+        background-color: rgba(255,255,255,0.1) !important;
+    }
+    
+    .resultados-busqueda li:last-child {
+        border-bottom: none !important;
+    }
+    
+    .resultados-busqueda li *,
+    .resultados-busqueda li span,
+    .resultados-busqueda li div,
+    .resultados-busqueda li a {
+        color: white !important;
+    }
+}
+
+/* iPad Pro 12.9" y otros iPads de alta resolución */
+@media only screen 
+and (min-device-width: 1024px) 
+and (max-device-width: 1366px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+    .resultados-busqueda {
+        background-color: rgba(0,0,0,0.95) !important;
+        color: white !important;
+        border-radius: 5px !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+        max-height: 300px !important;
+    }
+    
+    .resultados-busqueda li {
+        color: white !important;
+        padding: 12px 14px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    }
+    
+    .resultados-busqueda li:hover {
+        background-color: rgba(255,255,255,0.1) !important;
+    }
+    
+    .resultados-busqueda li:last-child {
+        border-bottom: none !important;
+    }
+    
+    .resultados-busqueda li *,
+    .resultados-busqueda li span,
+    .resultados-busqueda li div,
+    .resultados-busqueda li a {
+        color: white !important;
     }
 }
 

@@ -18,6 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Debug: Verificar si hay múltiples resultados
     const allResultados = document.querySelectorAll('.resultados-busqueda');
     console.log('Debug - Todos los resultados encontrados:', allResultados.length, allResultados);
+    
+    // Debug: Verificar si los productos están cargados
+    console.log('Debug - Productos cargados:', typeof productos !== 'undefined' ? productos.length : 'NO DEFINIDO');
+    if (typeof productos !== 'undefined') {
+        console.log('Debug - Primer producto:', productos[0]);
+        console.log('Debug - Algunos nombres de productos:', productos.slice(0, 5).map(p => p.nombre));
+    }
     const body = document.body;
     const contenedorResultados = document.getElementById("lista-resultados");
     const tituloResultados = document.getElementById("titulo-resultados");
@@ -245,6 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (!valor) {
                 resultados.classList.remove("mostrar-resultados");
+                resultados.style.setProperty("display", "none", "important"); // Ocultar con setProperty
                 return;
             }
 
@@ -256,6 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (coincidencias.length === 0) {
                 resultados.classList.remove("mostrar-resultados");
+                resultados.style.setProperty("display", "none", "important"); // Ocultar con setProperty
                 return;
             }
 
@@ -278,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="resultado-placeholder" style="display: none; width: 40px; height: 40px; background: #f0f0f0; border-radius: 4px; margin-right: 10px; align-items: center; justify-content: center; color: #666; font-size: 12px;">
                             📦
                         </div>
-                        <span style="color: black;">${escapeHtml(p.nombre)}</span>
+                        <span style="color: white !important;">${escapeHtml(p.nombre)}</span>
                     </div>
                 `;
                 li.addEventListener("click", () => irAResultados(p.nombre));
@@ -286,8 +295,20 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             resultados.classList.add("mostrar-resultados");
+            resultados.style.setProperty("display", "block", "important"); // Forzar con setProperty
+            
+            // Intento adicional con setTimeout por si hay conflicto de timing
+            setTimeout(() => {
+                resultados.style.setProperty("display", "block", "important");
+                console.log("Forzado display con setTimeout"); // Debug
+            }, 10);
+            
             console.log("Clase mostrar-resultados agregada"); // Debug
             console.log("Resultados HTML:", resultados.innerHTML); // Debug
+            console.log("Clases del contenedor:", resultados.className); // Debug
+            console.log("Estilo computed del contenedor:", window.getComputedStyle(resultados).display); // Debug
+            console.log("Estilo computed visibility:", window.getComputedStyle(resultados).visibility); // Debug
+            console.log("Estilo computed opacity:", window.getComputedStyle(resultados).opacity); // Debug
         });
 
         inputBuscar.addEventListener("keydown", e => {
@@ -396,6 +417,10 @@ function getRelativePrefix() {
 
     if (path.includes('/pages/cart/')) {
         return '../../../';
+    }
+
+    if (path.includes('/contacto/')) {
+        return '../';
     }
 
     return ''; // Root

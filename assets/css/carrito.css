@@ -187,3 +187,85 @@
     color: #c9c9c9;
 }
 
+/* ==================== MEDIA QUERY PARA MÓVIL ==================== */
+@media (max-width: 767.98px) {
+    /* Main del carrito para móvil */
+    .carrito-page {
+        padding: 1rem;
+        gap: 1rem;
+        margin-top: 80px; /* Espacio para header fijo */
+        flex-direction: column;
+    }
+    
+    /* Contenedor principal en móvil */
+    .carrito-container {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Productos del carrito en móvil */
+    .productos-carrito {
+        flex: 1;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    /* Título en móvil */
+    .productos-carrito h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    /* Icono del título en móvil */
+    .titulo-carrito-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Resumen de compra en móvil */
+    .resumen-compra {
+        flex: 1;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    /* Botón de pagar en móvil */
+    #btn-pagar {
+        padding: 1rem;
+        font-size: 1.1rem;
+        margin-top: 0.8rem;
+    }
+    
+    /* Items del carrito en móvil */
+    .item-carrito {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+        padding: 0.8rem 0;
+    }
+    
+    /* Imagen del item en móvil */
+    .item-img {
+        width: 80px;
+        height: 80px;
+        align-self: center;
+    }
+    
+    /* Contenedor de info del item en móvil */
+    .carrito-item-info {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Botón eliminar en móvil */
+    .btn-eliminar {
+        width: 100%;
+        padding: 0.6rem;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        box-sizing: border-box;
+    }
+}
+

@@ -1,9 +1,23 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const btnBuscar = document.getElementById("btn-buscar");
     const inputBuscar = document.getElementById("input-buscar");
     const resultados = document.getElementById("resultados-busqueda");
+    // Debug: Verificar que los elementos existen
+    console.log('Debug - Elementos del buscador:', {
+        btnBuscar,
+        inputBuscar,
+        resultados
+    });
+    // Debug: Detectar si estamos en móvil
+    const isMobile = window.innerWidth <= 767;
+    console.log('Debug - Es móvil:', isMobile);
+    // Debug: Verificar si hay múltiples inputs
+    const allInputs = document.querySelectorAll('#input-buscar');
+    console.log('Debug - Todos los inputs encontrados:', allInputs.length, allInputs);
+    // Debug: Verificar si hay múltiples resultados
+    const allResultados = document.querySelectorAll('.resultados-busqueda');
+    console.log('Debug - Todos los resultados encontrados:', allResultados.length, allResultados);
     const body = document.body;
     const contenedorResultados = document.getElementById("lista-resultados");
     const tituloResultados = document.getElementById("titulo-resultados");
@@ -264,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="resultado-placeholder" style="display: none; width: 40px; height: 40px; background: #f0f0f0; border-radius: 4px; margin-right: 10px; align-items: center; justify-content: center; color: #666; font-size: 12px;">
                             📦
                         </div>
-                        <span>${p.nombre}</span>
+                        <span style="color: black;">${escapeHtml(p.nombre)}</span>
                     </div>
                 `;
                 li.addEventListener("click", () => irAResultados(p.nombre));
@@ -353,8 +367,8 @@ function normalizarTexto(texto) {
 
 function irAResultados(texto) {
     const q = encodeURIComponent(texto.trim());
-    // Fix: usar prefijo relativo para ir a resultados_busqueda.html
-    window.location.href = getRelativePrefix() + `resultados_busqueda.html?q=${q}`;
+    // Redirigir a pages/search/index.html con la ruta relativa correcta
+    window.location.href = getRelativePrefix() + `pages/search/index.html?q=${q}`;
 }
 
 function getRelativePrefix() {
@@ -374,6 +388,14 @@ function getRelativePrefix() {
 
     if (path.includes('/categorias/')) {
         return '../';
+    }
+
+    if (path.includes('/pages/search/')) {
+        return '../../';
+    }
+
+    if (path.includes('/pages/cart/')) {
+        return '../../../';
     }
 
     return ''; // Root

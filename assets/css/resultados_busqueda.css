@@ -1,0 +1,170 @@
+
+
+
+
+
+/* ===============================
+   CONTENEDOR
+================================ */
+
+/* Main */
+.contenedor-resultados {
+    max-width: 1200px;
+    padding: 0 20px;
+    text-align: center;
+    margin: 10px auto 22px auto; /* ← centra horizontal */ /* separacion ideal del main y el header fijo*/
+}
+
+/* h2 */
+#titulo-resultados {
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 1px;
+    font-size: 26px;
+    color: white;
+    padding: 5px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    display: inline-block; /* ajusta el fondo al texto */
+}
+
+/* ===============================
+   GRID
+================================ */
+.lista-resultados {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* ===============================
+   TARJETA
+================================ */
+.resultado-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    animation: fadeUp 0.4s ease;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.resultado-card:hover {
+    transform: translateY(-6px);
+}
+
+/* ===============================
+   IMAGEN
+================================ */
+.resultado-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: #fafafa;
+    padding: 10px;
+}
+
+/* ===============================
+   CONTENIDO
+================================ */
+.resultado-info {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.resultado-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    min-height: 42px;
+    color: rgb(0, 0, 0);
+    min-height: auto; /* permitir altura automática según el contenido */
+    line-height: 1.2; /* opcional, para mejor lectura */
+    word-wrap: break-word; /* asegurar que el texto largo se ajuste */
+}
+
+.resultado-precio {
+    margin-bottom: 15px;
+    font-size: 17px;
+    color:rgb(82, 81, 81)
+}
+
+
+/* Item del buscador con imagen */
+.item-busqueda {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.item-busqueda img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.item-busqueda:hover {
+    background-color: #f2f2f2;
+}
+
+
+
+/* ===============================
+   SIN RESULTADOS
+================================ */
+.sin-resultados {
+     display: inline-flex;      /* 🔥 clave */
+    align-items: center;
+    justify-content: center;
+    width: fit-content;        /* 🔥 se ajusta al texto */
+    max-width: 90%;
+    padding: 10px 25px;
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    margin: 40px auto 0;
+    text-align: center;
+   
+}
+
+
+
+/* Botón agregar */
+.btn-agregar {
+    margin-top: 8px;
+    width: 35%;
+    height: 35px;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 100px;
+    outline: none;
+    padding: 0.5rem;
+    margin-bottom: 3px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    align-self: center;
+    background-color: #ffcc00;
+}
+.btn-agregar:hover {
+    background-color: #ffdd53;
+}
+

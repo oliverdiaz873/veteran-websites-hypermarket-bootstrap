@@ -80,14 +80,22 @@ document.addEventListener('DOMContentLoaded', () => {
         listaCarrito.innerHTML = carrito.map(p => {
             const subtotal = p.precio * p.cantidad;
 
-            // Ajustar ruta de imagen para soporte local (file://) y subdirectorios
+            // Ajustar ruta de imagen para soporte local (file://) y diferentes subdirectorios
             let imgBtn = p.img;
             if (imgBtn.startsWith('/')) {
+                // Detectar si estamos en pages/cart/
+                const isInCartPage = window.location.pathname.includes('/pages/cart/');
                 const isInSubDir = window.location.pathname.includes('/categorias/') || window.location.pathname.includes('/productos/');
-                if (isInSubDir) {
+                
+                if (isInCartPage) {
+                    // Desde pages/cart/ necesitamos ir 3 niveles arriba para llegar a assets/
+                    imgBtn = '../../..' + imgBtn;
+                } else if (isInSubDir) {
+                    // Desde categorias/ o productos/ necesitamos ir 2 niveles arriba
                     imgBtn = '..' + imgBtn;
                 } else {
-                    imgBtn = imgBtn.substring(1); // Quitar '/' inicial para root
+                    // Desde root, quitar '/' inicial
+                    imgBtn = imgBtn.substring(1);
                 }
             }
 
